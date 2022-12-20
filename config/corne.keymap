@@ -59,7 +59,7 @@
           &kp J                         // j
           &kp K                         // k
           &kp L                         // l
-          &single_quote                 // ;
+          &mm_single_quote              // ;
           &kp RETURN                    // '
           
           &kp              LSHFT        // Left Shift
