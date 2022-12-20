@@ -31,6 +31,14 @@
 / {
 
   behaviors {
+    ltb: {
+      compatible = "zmk,behavior-hold-tap";
+      label = "LAYER_TAP_BALANCED";
+      #binding-cells = <2>;
+      bindings = <&mo>, <&kp>;
+      flavor = "balanced";
+      tapping-term-ms = <200>;
+    };
     htl: hold_tap_left {
       compatible = "zmk,behavior-hold-tap";
       label = "HOLD_TAP_LEFT";
@@ -113,9 +121,9 @@
 
           &kp LGUI                      // Left Option
           &mo 2                         // Left Command
-          &lt NAVIGATION SPACE          // Space
+          &ltb NAVIGATION SPACE          // Space
 
-          &lt NAVIGATION SPACE          // Space
+          &ltb NAVIGATION SPACE          // Space
           &mo 3                         // Right Command
           &kp BACKSPACE                 // Right Option
 
