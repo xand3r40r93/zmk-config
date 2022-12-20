@@ -15,24 +15,32 @@
     #binding-cells = <0>; \
     bindings = <&kp KEY>, <&kp MOD_KEY>; \
     mods = <(MOD_LSFT|MOD_RSFT)>; \
-  };
-#define MOD_MORPH_SHIFT_KEEP(NAME, KEY, MOD_KEY) \
-  mm_##NAME: mm_##NAME { \
-    compatible = "zmk,behavior-mod-morph"; \
-    label = #NAME; \
-    #binding-cells = <0>; \
-    bindings = <&kp KEY>, <&kp MOD_KEY>; \
-    mods = <(MOD_LSFT|MOD_RSFT)>; \
     keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
   };
 
 #define DEFAULT 0
 #define NAVIGATION 1
 
+// KEY POSITION REFERENCE
+// ------------------------------------------------------------------------
+// | 00 | 01 | 02 | 03 | 04 | 05 |    | 06 | 07 | 08 | 09 | 10 | 11 |
+// | 12 | 13 | 14 | 15 | 16 | 17 |    | 18 | 19 | 20 | 21 | 22 | 23 |
+// | 24 | 25 | 26 | 27 | 28 | 29 |    | 30 | 31 | 32 | 33 | 34 | 35 |
+//                | 37 | 38 | 39 |    | 40 | 41 | 42 |
+
 / {
 
   behaviors {
-    MOD_MORPH_SHIFT_KEEP(single_quote, SINGLE_QUOTE, TILDE) // ' | `
+    hm: homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_MODS";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <0>;
+        flavor = "balanced";
+        bindings = <&kp>, <&kp>;
+    };
+    MOD_MORPH_SHIFT(single_quote, SINGLE_QUOTE, TILDE) // ' | `
   };
 
   keymap {
@@ -40,11 +48,6 @@
 
       default_layer {
         bindings = <
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
           &kp ESC                       // Tab       -> Esc |
           &kp Q                         // q         -> q   | Q
@@ -61,32 +64,32 @@
           &kp EQUAL                     // \         -> =   | _
 
           &kp TAB                       // Caps Lock
-          &kp A                         // a
-          &kp S                         // s
-          &kp D                         // d
-          &kp F                         // f
+          &hm LEFT_CONTROL A                         // a
+          &hm LEFT_ALT S                         // s
+          &hm LEFT_SHIFT D                         // d
+          &hm LEFT_COMMAND F                         // f
           &kp G                         // g
 
           &kp H                         // h
-          &kp J                         // j
-          &kp K                         // k
-          &kp L                         // l
+          &hm RIGHT_COMMAND J                         // j
+          &hm RIGHT_SHIFT K                         // k
+          &hm RIGHT_ALT L                         // l
           &mm_single_quote              // ;
           &kp RETURN                    // '
           
-          &kp              LSHFT        // Left Shift
-          &mt LEFT_CONTROL Z            // z
-          &mt LEFT_ALT     X            // x
-          &mt LEFT_SHIFT   C            // c
-          &mt LEFT_COMMAND V            // v
-          &kp              B            // b
+          &kp LSHFT        // Left Shift
+          &kp Z            // z
+          &kp X            // x
+          &kp C            // c
+          &kp V            // v
+          &kp B            // b
 
-          &kp               N           // n
-          &mt RIGHT_COMMAND M           // m
-          &mt RIGHT_SHIFT   COMMA       // ,
-          &mt RIGHT_ALT     DOT         // .
-          &mt RIGHT_CONTROL FSLH        // /
-          &kp               RETURN      // Right Shift    -> Return 
+          &kp N           // n
+          &kp M           // m
+          &kp COMMA       // ,
+          &kp DOT         // .
+          &hm RIGHT_CONTROL FSLH        // /
+          &kp RETURN      // Right Shift    -> Return 
 
           &kp LGUI                      // Left Option
           &mo 2                         // Left Command
@@ -102,66 +105,61 @@
       navigation_layer {
         bindings = <
 
-          &trans
+          &none
           &kp F1
           &kp F2
           &kp F3
           &kp F4
-          &trans
+          &none
 
-          &trans
+          &none
           &kp HOME
           &kp UP_ARROW
           &kp END
           &kp PAGE_UP
-          &trans
+          &none
 
-          &trans
+          &none
           &kp F5
           &kp F6
           &kp F7
           &kp F8
-          &trans
+          &none
 
-          &trans
+          &none
           &kp LEFT_ARROW
           &kp DOWN_ARROW
           &kp RIGHT_ARROW
           &kp PAGE_DOWN
-          &trans
+          &none
 
-          &trans
-          &kp F9
-          &kp F10
-          &kp F11
-          &kp F12
-          &trans
+          &none
+          &hm LEFT_CONTROL F9
+          &hm LEFT_ALT     F10
+          &hm LEFT_SHIFT   F11
+          &hm LEFT_COMMAND F12
+          &none
 
-          &trans
-          &trans
-          &trans
-          &trans
-          &trans
-          &trans
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
 
-          &trans
-          &trans
-          &trans
+          &none
+          &none
+          &none
 
-          &trans
-          &trans
-          &trans
+          &none
+          &none
+          &none
 
         >;
       };
 
       lower_layer {
         bindings = <
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
 
         &kp TAB
         &kp N1
@@ -218,11 +216,6 @@
 
     raise_layer {
       bindings = <
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
 
         &kp TAB
         &kp EXCL
