@@ -68,7 +68,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <0>;
     };
-    MOD_MORPH_SHIFT(single_quote, SINGLE_QUOTE, TILDE) // ' | `
+    MOD_MORPH_SHIFT(single_quote, SINGLE_QUOTE, GRAVE) // ' | `
   };
 
   keymap {
