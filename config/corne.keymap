@@ -31,6 +31,26 @@
 / {
 
   behaviors {
+    htl: hold_tap_left {
+      compatible = "zmk,behavior-hold-tap";
+      label = "LEFT_POSITIONAL_HOLD_TAP";
+      #binding-cells = <2>;
+      flavor = "tap-unless-interrupted";
+      tapping-term-ms = <100>;
+      quick-tap-ms = <200>;
+      bindings = <&kp>, <&kp>;
+      hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 42>;
+    };
+    htr: hold_tap_right {
+      compatible = "zmk,behavior-hold-tap";
+      label = "LEFT_POSITIONAL_HOLD_TAP";
+      #binding-cells = <2>;
+      flavor = "tap-unless-interrupted";
+      tapping-term-ms = <100>;
+      quick-tap-ms = <200>;
+      bindings = <&kp>, <&kp>;
+      hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 37 38 39>;
+    };
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
@@ -64,16 +84,16 @@
           &kp EQUAL                     // \         -> =   | _
 
           &kp TAB                       // Caps Lock
-          &hm LEFT_CONTROL A                         // a
-          &hm LEFT_ALT S                         // s
-          &hm LEFT_SHIFT D                         // d
-          &hm LEFT_COMMAND F                         // f
+          &htl LEFT_CONTROL A                         // a
+          &htl LEFT_ALT S                         // s
+          &htl LEFT_SHIFT D                         // d
+          &htl LEFT_COMMAND F                         // f
           &kp G                         // g
 
           &kp H                         // h
-          &hm RIGHT_COMMAND J                         // j
-          &hm RIGHT_SHIFT K                         // k
-          &hm RIGHT_ALT L                         // l
+          &htr RIGHT_COMMAND J                         // j
+          &htr RIGHT_SHIFT K                         // k
+          &htr RIGHT_ALT L                         // l
           &mm_single_quote              // ;
           &kp RETURN                    // '
           
@@ -117,27 +137,27 @@
           &kp UP_ARROW
           &kp END
           &kp PAGE_UP
+          &kp BACKSPACE
+
+          &none
+          &htl LEFT_CONTROL F5
+          &htl LEFT_ALT F6
+          &htl LEFT_SHIFT F7
+          &htl LEFT_COMMAND F8
           &none
 
           &none
-          &kp F5
-          &kp F6
-          &kp F7
-          &kp F8
+          &htr LEFT_ARROW
+          &htr DOWN_ARROW
+          &htr RIGHT_ARROW
+          &htr PAGE_DOWN
           &none
 
           &none
-          &kp LEFT_ARROW
-          &kp DOWN_ARROW
-          &kp RIGHT_ARROW
-          &kp PAGE_DOWN
-          &none
-
-          &none
-          &hm LEFT_CONTROL F9
-          &hm LEFT_ALT     F10
-          &hm LEFT_SHIFT   F11
-          &hm LEFT_COMMAND F12
+          &kp F9
+          &kp F10
+          &kp F11
+          &kp F12
           &none
 
           &none
