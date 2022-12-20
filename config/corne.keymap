@@ -33,7 +33,7 @@
   behaviors {
     htl: hold_tap_left {
       compatible = "zmk,behavior-hold-tap";
-      label = "LEFT_POSITIONAL_HOLD_TAP";
+      label = "HOLD_TAP_LEFT";
       #binding-cells = <2>;
       flavor = "tap-unless-interrupted";
       tapping-term-ms = <100>;
@@ -43,7 +43,7 @@
     };
     htr: hold_tap_right {
       compatible = "zmk,behavior-hold-tap";
-      label = "LEFT_POSITIONAL_HOLD_TAP";
+      label = "HOLD_TAP_RIGHT";
       #binding-cells = <2>;
       flavor = "tap-unless-interrupted";
       tapping-term-ms = <100>;
