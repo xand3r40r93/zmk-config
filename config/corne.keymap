@@ -16,11 +16,20 @@
     bindings = <&kp KEY>, <&kp MOD_KEY>; \
     mods = <(MOD_LSFT|MOD_RSFT)>; \
   };
+#define MOD_MORPH_SHIFT_MASKED(NAME, KEY, MOD_KEY) \
+  mm_##NAME: mm_##NAME { \
+    compatible = "zmk,behavior-mod-morph"; \
+    label = #NAME; \
+    #binding-cells = <0>; \
+    bindings = <&kp KEY>, <&kp MOD_KEY>; \
+    mods = <(MOD_LSFT|MOD_RSFT)>; \
+    masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
+  };
 
 / {
 
   behaviors {
-    MOD_MORPH_SHIFT(single_quote, SINGLE_QUOTE, GRAVE)
+    MOD_MORPH_SHIFT_MASKED(single_quote, SINGLE_QUOTE, GRAVE)
   };
 
   keymap {
