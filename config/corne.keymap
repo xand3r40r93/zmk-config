@@ -7,9 +7,22 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
+
+#define MOD_MORPH_SHIFT(NAME, KEY, MOD_KEY) \
+  mm_##NAME: mm_##NAME { \
+    compatible = "zmk,behavior-mod-morph"; \
+    label = #NAME; \
+    #binding-cells = <0>; \
+    bindings = <&kp KEY>, <&kp MOD_KEY>; \
+    mods = <(MOD_LSFT|MOD_RSFT)>; \
+  };
 
 / {
+
+  behaviors {
+    MOD_MORPH_SHIFT(single_quote, SINGLE_QUOTE, GRAVE)
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -21,55 +34,55 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
-          &kp ESC  // Tab
-          &kp Q    // q
-          &kp W    // w
-          &kp E    // e
-          &kp R    // r
-          &kp T    // t
+          &kp ESC                       // Tab       -> Esc |
+          &kp Q                         // q         -> q   | Q
+          &kp W                         // w         -> w   | W
+          &kp E                         // e         -> e   | E
+          &kp R                         // r         -> r   | R
+          &kp T                         // t         -> t   | T
 
-          &kp Y      // y
-          &kp U      // u
-          &kp I      // i
-          &kp O      // o
-          &kp P      // p
-          &kp EQUAL  // \
+          &kp Y                         // y         -> y   | Y
+          &kp U                         // u         -> u   | U
+          &kp I                         // i         -> i   | I
+          &kp O                         // o         -> o   | O
+          &kp P                         // p         -> p   | P
+          &kp EQUAL                     // \         -> =   | _
 
-          &kp TAB  // Caps Lock
-          &kp A    // a
-          &kp S    // s
-          &kp D    // d
-          &kp F    // f
-          &kp G    // g
+          &kp TAB                       // Caps Lock
+          &kp A                         // a
+          &kp S                         // s
+          &kp D                         // d
+          &kp F                         // f
+          &kp G                         // g
 
-          &kp H     // h
-          &kp J     // j
-          &kp K     // k
-          &kp L     // l
-          &kp SEMI  // ;
-          &kp SQT   // '
+          &kp H                         // h
+          &kp J                         // j
+          &kp K                         // k
+          &kp L                         // l
+          &kp SINGLE_QUOTE              // ;
+          &kp RETURN                    // '
           
-          &kp LSHFT           // Left Shift
-          &mt LEFT_CONTROL Z  // z
-          &mt LEFT_ALT X      // x
-          &mt LEFT_SHIFT C    // c
-          &mt LEFT_COMMAND V  // v
-          &kp B               // b
+          &kp              LSHFT        // Left Shift
+          &mt LEFT_CONTROL Z            // z
+          &mt LEFT_ALT     X            // x
+          &mt LEFT_SHIFT   C            // c
+          &mt LEFT_COMMAND V            // v
+          &kp              B            // b
 
-          &kp N                   // n
-          &mt RIGHT_COMMAND M     // m
-          &mt RIGHT_SHIFT COMMA   // ,
-          &mt RIGHT_ALT DOT       // .
-          &mt RIGHT_CONTROL FSLH  // /
-          &kp RETURN              // Right Shift
+          &kp               N           // n
+          &mt RIGHT_COMMAND M           // m
+          &mt RIGHT_SHIFT   COMMA       // ,
+          &mt RIGHT_ALT     DOT         // .
+          &mt RIGHT_CONTROL FSLH        // /
+          &kp               RETURN      // Right Shift    -> Return 
 
-          &kp LGUI   // Left Option
-          &mo 2      // Left Command
-          &kp SPACE  // Space
+          &kp LGUI                      // Left Option
+          &mo 2                         // Left Command
+          &kp SPACE                     // Space
 
-          &kp SPACE     // Space
-          &mo 1         // Right Command
-          &kp BACKSPACE // Right Option
+          &kp SPACE                     // Space
+          &mo 1                         // Right Command
+          &kp BACKSPACE                 // Right Option
 
         >;
       };
@@ -197,4 +210,5 @@
     };
 
   };
+
 };
