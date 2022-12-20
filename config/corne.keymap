@@ -31,7 +31,7 @@
 / {
 
   behaviors {
-    ltb: {
+    ltb: layer_tap_balanced {
       compatible = "zmk,behavior-hold-tap";
       label = "LAYER_TAP_BALANCED";
       #binding-cells = <2>;
