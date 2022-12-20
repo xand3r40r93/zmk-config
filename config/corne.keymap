@@ -21,7 +21,7 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
-          &kp TAB  // Tab
+          &kp ESC  // Tab
           &kp Q    // q
           &kp W    // w
           &kp E    // e
@@ -34,13 +34,13 @@
           &kp O      // o
           &kp P      // p
           &kp EQUAL  // \
-
-          &kp LCTRL  // Caps Lock
-          &kp A      // a
-          &kp S      // s
-          &kp D      // d
-          &kp F      // f
-          &kp G      // g
+ 
+          &kp TAB  // Caps Lock
+          &kp A    // a
+          &kp S    // s
+          &kp D    // d
+          &kp F    // f
+          &kp G    // g
 
           &kp H     // h
           &kp J     // j
