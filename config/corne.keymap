@@ -37,7 +37,7 @@
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
       flavor = "balanced";
-      tapping-term-ms = <200>;
+      tapping-term-ms = <500>;
     };
     lt_tp: layer_tap_tap_preferred {
       compatible = "zmk,behavior-hold-tap";
@@ -129,9 +129,9 @@
 
           &kp LGUI                      // Left Option
           &mo 2                         // Left Command
-          &lt_tp NAVIGATION SPACE          // Space
+          &lt_b NAVIGATION SPACE          // Space
 
-          &lt_tp NAVIGATION SPACE          // Space
+          &lt_b NAVIGATION SPACE          // Space
           &mo 3                         // Right Command
           &kp BACKSPACE                 // Right Option
 
