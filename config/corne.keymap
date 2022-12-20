@@ -45,7 +45,7 @@
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
       flavor = "tap-preferred";
-      tapping-term-ms = <200>;
+      tapping-term-ms = <500>;
     };
     htl: hold_tap_left {
       compatible = "zmk,behavior-hold-tap";
@@ -76,7 +76,7 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <0>;
     };
-    MOD_MORPH_SHIFT(single_quote, SINGLE_QUOTE, GRAVE) // ' | `
+    MOD_MORPH_SHIFT(single_quote, SINGLE_QUOTE, LS(GRAVE)) // ' | `
   };
 
   keymap {
