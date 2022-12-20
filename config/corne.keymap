@@ -56,20 +56,20 @@
           &kp V      // v
           &kp B      // b
 
-          &kp N      // n
-          &kp M      // m
-          &kp COMMA  // ,
-          &kp DOT    // .
-          &kp FSLH   // /
-          &kp ESC    // Right Shift
+          &kp N       // n
+          &kp M       // m
+          &kp COMMA   // ,
+          &kp DOT     // .
+          &kp FSLH    // /
+          &kp RETURN  // Right Shift
 
           &kp LGUI   // Left Option
           &mo 2      // Left Command
           &kp SPACE  // Space
 
-          &kp SPACE  // Space
-          &mo 1      // Right Command
-          &kp RALT   // Right Option
+          &kp SPACE     // Space
+          &mo 1         // Right Command
+          &kp BACKSPACE // Right Option
 
         >;
     };
