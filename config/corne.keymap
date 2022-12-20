@@ -140,17 +140,17 @@
           &kp BACKSPACE
 
           &trans
-          &htl LEFT_CONTROL F5
-          &htl LEFT_ALT F6
-          &htl LEFT_SHIFT F7
-          &htl LEFT_COMMAND F8
+          &mt LEFT_CONTROL F5
+          &mt LEFT_ALT F6
+          &mt LEFT_SHIFT F7
+          &mt LEFT_COMMAND F8
           &trans
 
           &trans
-          &htr LEFT_ARROW
-          &htr DOWN_ARROW
-          &htr RIGHT_ARROW
-          &htr PAGE_DOWN
+          &mt LEFT_ARROW
+          &mt DOWN_ARROW
+          &mt RIGHT_ARROW
+          &mt PAGE_DOWN
           &trans
 
           &trans
