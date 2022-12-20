@@ -125,55 +125,55 @@
       navigation_layer {
         bindings = <
 
-          &none
+          &trans
           &kp F1
           &kp F2
           &kp F3
           &kp F4
-          &none
+          &trans
 
-          &none
+          &trans
           &kp HOME
           &kp UP_ARROW
           &kp END
           &kp PAGE_UP
           &kp BACKSPACE
 
-          &none
+          &trans
           &htl LEFT_CONTROL F5
           &htl LEFT_ALT F6
           &htl LEFT_SHIFT F7
           &htl LEFT_COMMAND F8
-          &none
+          &trans
 
-          &none
+          &trans
           &htr LEFT_ARROW
           &htr DOWN_ARROW
           &htr RIGHT_ARROW
           &htr PAGE_DOWN
-          &none
+          &trans
 
-          &none
+          &trans
           &kp F9
           &kp F10
           &kp F11
           &kp F12
-          &none
+          &trans
 
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
+          &trans
+          &trans
+          &trans
+          &trans
+          &trans
+          &trans
 
-          &none
-          &none
-          &none
+          &trans
+          &trans
+          &trans
 
-          &none
-          &none
-          &none
+          &trans
+          &trans
+          &trans
 
         >;
       };
