@@ -35,33 +35,33 @@
           &kp P      // p
           &kp EQUAL  // \
 
-          &kp LCTRL           // Caps Lock
-          &mt LEFT_CONTROL A  // a
-          &mt LEFT_ALT     S  // s
-          &mt LEFT_SHIFT   D  // d
-          &mt LEFT_COMMAND F  // f
-          &kp G               // g
+          &kp LCTRL  // Caps Lock
+          &kp A      // a
+          &kp S      // s
+          &kp D      // d
+          &kp F      // f
+          &kp G      // g
 
-          &kp H                   // h
-          &mt RIGHT_COMMAND J     // j
-          &mt RIGHT_SHIFT   K     // k
-          &mt RIGHT_ALT     L     // l
-          &mt RIGHT_CONTROL SEMI  // ;
-          &kp SQT                 // '
+          &kp H     // h
+          &kp J     // j
+          &kp K     // k
+          &kp L     // l
+          &kp SEMI  // ;
+          &kp SQT   // '
           
-          &kp LSHFT  // Left Shift
-          &kp Z      // z
-          &kp X      // x
-          &kp C      // c
-          &kp V      // v
-          &kp B      // b
+          &kp LSHFT           // Left Shift
+          &mt LEFT_CONTROL Z  // z
+          &mt LEFT_ALT X      // x
+          &mt LEFT_SHIFT C    // c
+          &mt LEFT_COMMAND V  // v
+          &kp B               // b
 
-          &kp N       // n
-          &kp M       // m
-          &kp COMMA   // ,
-          &kp DOT     // .
-          &kp FSLH    // /
-          &kp RETURN  // Right Shift
+          &kp N                   // n
+          &mt RIGHT_COMMAND M     // m
+          &mt RIGHT_SHIFT COMMA   // ,
+          &mt RIGHT_ALT DOT       // .
+          &mt RIGHT_CONTROL FSLH  // /
+          &kp RETURN              // Right Shift
 
           &kp LGUI   // Left Option
           &mo 2      // Left Command
@@ -72,9 +72,9 @@
           &kp BACKSPACE // Right Option
 
         >;
-    };
+      };
 
-    lower_layer {
+      lower_layer {
         bindings = <
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -82,27 +82,118 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-  &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-  &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-        >;
+        &kp TAB
+        &kp N1
+        &kp N2
+        &kp N3
+        &kp N4
+        &kp N5
+        
+        &kp N6
+        &kp N7
+        &kp N8
+        &kp N9
+        &kp N0
+        &kp BSPC
+
+        &bt BT_CLR
+        &bt BT_SEL 0
+        &bt BT_SEL 1
+        &bt BT_SEL 2
+        &bt BT_SEL 3
+        &bt BT_SEL 4
+
+        &kp LEFT
+        &kp DOWN
+        &kp UP
+        &kp RIGHT
+        &trans
+        &trans
+
+        &kp LSHFT
+        &trans
+        &trans
+        &trans
+        &trans
+        &trans
+
+        &trans
+        &trans
+        &trans
+        &trans
+        &trans
+        &trans
+
+        &kp LGUI
+        &trans
+        &kp SPACE
+        
+        &kp RET
+        &trans
+        &kp RALT
+
+      >;
     };
 
     raise_layer {
-        bindings = <
+      bindings = <
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-  &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-  &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-  &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                           &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+        &kp TAB
+        &kp EXCL
+        &kp AT
+        &kp HASH
+        &kp DLLR
+        &kp PRCNT
 
-        >;
+        &kp CARET
+        &kp AMPS
+        &kp KP_MULTIPLY
+        &kp LPAR
+        &kp RPAR
+        &kp BSPC
+
+        &kp LCTRL
+        &trans
+        &trans
+        &trans
+        &trans
+        &trans
+        
+        &kp MINUS
+        &kp EQUAL
+        &kp LBKT
+        &kp RBKT
+        &kp BSLH
+        &kp GRAVE
+
+        &kp LSHFT
+        &trans
+        &trans
+        &trans
+        &trans
+        &trans
+
+        &kp UNDER
+        &kp PLUS
+        &kp LBRC
+        &kp RBRC
+        &kp PIPE
+        &kp TILDE
+
+        &kp LGUI
+        &trans
+        &kp SPACE
+        
+        &kp RET
+        &trans
+        &kp RALT
+
+      >;
     };
 
   };
