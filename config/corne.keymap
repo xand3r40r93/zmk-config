@@ -37,7 +37,7 @@
 
           &kp LCTRL           // Caps Lock
           &mt LEFT_CONTROL A  // a
-          &mt LEFT_OPTION  S  // s
+          &mt LEFT_ALT     S  // s
           &mt LEFT_SHIFT   D  // d
           &mt LEFT_COMMAND F  // f
           &kp G               // g
@@ -45,7 +45,7 @@
           &kp H                   // h
           &mt RIGHT_COMMAND J     // j
           &mt RIGHT_SHIFT   K     // k
-          &mt RIGHT_OPTION  L     // l
+          &mt RIGHT_ALT     L     // l
           &mt RIGHT_CONTROL SEMI  // ;
           &kp SQT                 // '
           
