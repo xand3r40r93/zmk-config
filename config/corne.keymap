@@ -20,7 +20,7 @@
 
 #define DEFAULT 0
 #define NAVIGATION_LEFT 1
-#define NAVIGATION_RIGHT 1
+#define NAVIGATION_RIGHT 2
 
 // KEY POSITION REFERENCE
 // ------------------------------------------------------------------------
@@ -47,6 +47,14 @@
       bindings = <&mo>, <&kp>;
       flavor = "tap-preferred";
       tapping-term-ms = <500>;
+    };
+    ht_b: hold_tap_balanced {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOLD_TAP_BALANCED";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+      flavor = "balanced";
+      tapping-term-ms = <200>;
     };
     htl: hold_tap_left {
       compatible = "zmk,behavior-hold-tap";
@@ -86,7 +94,7 @@
       default_layer {
         bindings = <
 
-          &kp ESC                       // Tab       -> Esc |
+          &ht_b ESC GRAVE               // Tab       -> Esc |
           &kp Q                         // q         -> q   | Q
           &kp W                         // w         -> w   | W
           &kp E                         // e         -> e   | E
@@ -114,7 +122,7 @@
           &mm_single_quote              // ;
           &kp RETURN                    // '
           
-          &kp LSHFT        // Left Shift
+          &none        // Left Shift
           &kp Z            // z
           &kp X            // x
           &kp C            // c
@@ -125,16 +133,16 @@
           &kp M           // m
           &kp COMMA       // ,
           &kp DOT         // .
-          &hm RIGHT_CONTROL FSLH        // /
+          &kp FSLH        // /
           &kp RETURN      // Right Shift    -> Return 
 
           &kp LGUI                      // Left Option
-          &mo 2                         // Left Command
+          &none                         // Left Command
           &lt_b NAVIGATION_LEFT SPACE          // Space
 
           &lt_b NAVIGATION_RIGHT SPACE          // Space
-          &mo 3                         // Right Command
-          &kp BACKSPACE                 // Right Option
+          &none                         // Right Command
+          &none                 // Right Option
 
         >;
       };
