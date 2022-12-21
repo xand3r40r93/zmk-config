@@ -19,7 +19,7 @@
   };
 
 #define TAP_DANCE(NAME, KEY1, KEY2) \
-  tp_##NAME: tp_##NAME { \
+  td_##NAME: td_##NAME { \
     compatible = "zmk,behavior-tap-dance"; \
       label = #NAME; \
       #binding-cells = <0>; \
