@@ -19,8 +19,8 @@
   };
 
 #define L_DEF 0
-#define L_LNAV 1
-#define L_RNAV 2
+#define L_NAV 1
+#define L_FN 2
 #define L_NUM 3
 
 // KEY POSITION REFERENCE
@@ -95,7 +95,7 @@
       default_layer {
         bindings = <
 
-          &gresc                        // Tab       -> Esc |
+          &kp GRAVE                     // Tab       -> Esc |
           &kp Q                         // q         -> q   | Q
           &kp W                         // w         -> w   | W
           &kp E                         // e         -> e   | E
@@ -113,11 +113,11 @@
           &mt_l LSHFT A                 // a
           &mt_l LCTRL S                 // s
           &mt_l LALT  D                 // d
-          &lt_b L_LNAV F                // f
+          &lt_b L_NAV F                 // f
           &kp G                         // g
 
           &kp H                         // h
-          &lt_b L_RNAV J                // j
+          &lt_b L_FN J                  // j
           &mt_r RALT  K                 // k
           &mt_r RCTRL L                 // l
           &mt_r RSHFT SQT               // ;
@@ -138,24 +138,24 @@
           &kp RET                       // Right Shift    -> RET 
 
           &none                         // Left Option
-          &mt LCMD DEL                // Left Command
+          &mt LCMD DEL                  // Left Command
           &kp SPACE                     // Space
 
           &kp SPACE                     // Space
-          &mt RCMD BSPC               // Right Command
+          &mt RCMD BSPC                 // Right Command
           &none                         // Right Option
 
         >;
       };
 
-      navigation_layer_left {
+      navigation_layer {
         bindings = <
 
-          &kp ESC
-          &kp F1
-          &kp F2
-          &kp F3
-          &kp F4
+          &none
+          &none
+          &none
+          &none
+          &none
           &none
 
           &none
@@ -166,10 +166,10 @@
           &kp BSPC
 
           &none
-          &mt_l LSHFT F5
-          &mt_l LCTRL F6
-          &mt_l LALT  F7
-          &kp F8
+          &kp LSHFT
+          &kp LCTRL
+          &kp LALT
+          &none
           &none
 
           &none
@@ -180,10 +180,10 @@
           &none
 
           &none
-          &kp F9
-          &kp F10
-          &kp F11
-          &kp F12
+          &none
+          &none
+          &none
+          &none
           &none
 
           &none
@@ -204,7 +204,7 @@
         >;
       };
 
-      navigation_layer_right {
+      fn_layer {
         bindings = <
 
           &kp ESC
@@ -215,11 +215,11 @@
           &none
 
           &none
-          &kp HOME
-          &kp UP
-          &kp END
-          &kp PG_UP
-          &kp BSPC
+          &none
+          &none
+          &none
+          &none
+          &none
 
           &none
           &kp F5
@@ -229,10 +229,10 @@
           &none
 
           &none
-          &kp LEFT
-          &mt_r RALT  DOWN
-          &mt_r RCTRL RIGHT
-          &mt_r RSHFT PG_DN
+          &none
+          &kp RALT
+          &kp RCTRL
+          &KP RSHFT
           &none
 
           &none
@@ -247,7 +247,7 @@
           &none
           &none
           &none
-          &kp RET
+          &none
 
           &none
           &none
