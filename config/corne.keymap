@@ -96,8 +96,8 @@
     };
     MOD_MORPH_SHIFT(sqt, SQT, GRAVE)     // ' | `
     MOD_MORPH_SHIFT(equal, EQUAL, UNDER) // = | _
-    TAP_DANCE(grave, GRAVE, ESC)
-    TAP_DANCE(brackets, LBKT, RBKT)
+    TAP_DANCE(grave, GRAVE, ESC, 100)
+    TAP_DANCE(brackets, LBKT, RBKT, 100)
     TAP_DANCE(tab, TAB, CLCK, 100)
   };
 
