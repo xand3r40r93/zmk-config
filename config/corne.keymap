@@ -24,7 +24,7 @@
       label = #NAME; \
       #binding-cells = <0>; \
       bindings = <&kp KEY1>, <&kp KEY2>; \
-      tapping-term-ms = <150>; \
+      tapping-term-ms = <175>; \
   };
 
 #define L_DEF 0
