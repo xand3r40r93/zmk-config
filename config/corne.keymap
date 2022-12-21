@@ -21,6 +21,7 @@
 #define DEFAULT 0
 #define NAVIGATION_LEFT 1
 #define NAVIGATION_RIGHT 2
+#define NUMBER 3
 
 // KEY POSITION REFERENCE
 // ------------------------------------------------------------------------
@@ -55,6 +56,7 @@
       bindings = <&kp>, <&kp>;
       flavor = "balanced";
       tapping-term-ms = <200>;
+      quick-tap-ms = <200>;
     };
     htl: hold_tap_left {
       compatible = "zmk,behavior-hold-tap";
@@ -109,40 +111,40 @@
           &kp EQUAL                     // \         -> =   | _
 
           &kp TAB                       // Caps Lock
-          &htl LEFT_CONTROL A                         // a
-          &htl LEFT_ALT S                         // s
-          &htl LEFT_SHIFT D                         // d
-          &htl LEFT_COMMAND F                         // f
+          &htl LEFT_CONTROL A           // a
+          &htl LEFT_ALT S               // s
+          &htl LEFT_SHIFT D             // d
+          &htl LEFT_COMMAND F           // f
           &kp G                         // g
 
           &kp H                         // h
-          &htr RIGHT_COMMAND J                         // j
-          &htr RIGHT_SHIFT K                         // k
-          &htr RIGHT_ALT L                         // l
+          &htr RIGHT_COMMAND J          // j
+          &htr RIGHT_SHIFT K            // k
+          &htr RIGHT_ALT L              // l
           &mm_single_quote              // ;
           &kp RETURN                    // '
           
-          &none        // Left Shift
-          &kp Z            // z
-          &kp X            // x
-          &kp C            // c
-          &kp V            // v
-          &kp B            // b
+          &none                         // Left Shift
+          &kp Z                         // z
+          &kp X                         // x
+          &kp C                         // c
+          &kp V                         // v
+          &kp B                         // b
 
-          &kp N           // n
-          &kp M           // m
-          &kp COMMA       // ,
-          &kp DOT         // .
-          &kp FSLH        // /
-          &kp RETURN      // Right Shift    -> Return 
+          &kp N                         // n
+          &kp M                         // m
+          &kp COMMA                     // ,
+          &kp DOT                       // .
+          &kp FSLH                      // /
+          &kp RETURN                    // Right Shift    -> Return 
 
           &kp LGUI                      // Left Option
           &none                         // Left Command
-          &lt_b NAVIGATION_LEFT SPACE          // Space
+          &lt_b NAVIGATION_LEFT SPACE   // Space
 
-          &lt_b NAVIGATION_RIGHT SPACE          // Space
-          &none                         // Right Command
-          &none                 // Right Option
+          &lt_b NAVIGATION_RIGHT SPACE  // Space
+          &mo NUMBERS                   // Right Command
+          &none                         // Right Option
 
         >;
       };
@@ -150,7 +152,7 @@
       navigation_layer_left {
         bindings = <
 
-          &none
+          &kp ESC
           &kp F1
           &kp F2
           &kp F3
@@ -206,7 +208,7 @@
       navigation_layer_RIGHT {
         bindings = <
 
-          &none
+          &kp ESC
           &kp F1
           &kp F2
           &kp F3
@@ -258,6 +260,62 @@
 
         >;
       };
+
+      number_layer {
+        bindings = <
+          
+          &kp ESC
+          &kp N1
+          &kp N2
+          &kp N3
+          &kp N4
+          &none
+
+          &none
+          &kp N5
+          &kp N6
+          &kp N7
+          &kp N8
+          &none
+
+          &none
+          &kp N9
+          &kp N0
+          &none
+          &none
+          &none
+
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
+
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
+
+          &none
+          &none
+          &none
+          &none
+          &none
+          &kp RETURN
+
+          &none
+          &none
+          &none
+
+          &none
+          &none
+          &none
+
+        >;
+      }
 
       lower_layer {
         bindings = <
