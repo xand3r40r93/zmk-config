@@ -87,8 +87,8 @@
         tapping-term-ms = <200>;
         quick-tap-ms = <0>;
     };
-    MOD_MORPH_SHIFT(single_quote, SINGLE_QUOTE, GRAVE) // ' | `
-    MOD_MORPH_SHIFT(equal, EQUAL, UNDER) //
+    MOD_MORPH_SHIFT(sqt, SQT, GRAVE)     // ' | `
+    MOD_MORPH_SHIFT(equal, EQUAL, UNDER) // = | _
   };
 
   keymap {
@@ -122,7 +122,7 @@
           &mt_r RCMD  J                 // j
           &mt_r RSHFT K                 // k
           &mt_r RALT  L                 // l
-          &mm_single_quote              // ;
+          &mm_sqt                       // ;
           &kp RET                       // '
           
           &none                         // Left Shift
