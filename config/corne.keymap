@@ -18,13 +18,13 @@
     keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
   };
 
-#define TAP_DANCE(NAME, KEY1, KEY2, MS) \
+#define TAP_DANCE(NAME, KEY1, KEY2) \
   td_##NAME: td_##NAME { \
     compatible = "zmk,behavior-tap-dance"; \
       label = #NAME; \
       #binding-cells = <0>; \
       bindings = <&kp KEY1>, <&kp KEY2>; \
-      tapping-term-ms = <MS>; \
+      tapping-term-ms = <100>; \
   };
 
 #define L_DEF 0
@@ -96,9 +96,9 @@
     };
     MOD_MORPH_SHIFT(sqt, SQT, GRAVE)     // ' | `
     MOD_MORPH_SHIFT(equal, EQUAL, UNDER) // = | _
-    TAP_DANCE(grave, GRAVE, ESC, 100)
-    TAP_DANCE(brackets, LBKT, RBKT, 100)
-    TAP_DANCE(tab, TAB, CLCK, 100)
+    TAP_DANCE(grave, GRAVE, ESC)
+    TAP_DANCE(brackets, LBKT, RBKT)
+    TAP_DANCE(tab, TAB, CLCK)
   };
 
   keymap {
