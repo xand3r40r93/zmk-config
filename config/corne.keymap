@@ -138,11 +138,11 @@
           &kp RET                       // Right Shift    -> RET 
 
           &none                         // Left Option
-          &mt_l LCMD DEL                // Left Command
+          &mt LCMD DEL                // Left Command
           &kp SPACE                     // Space
 
           &kp SPACE                     // Space
-          &mt_r RCMD BSPC               // Right Command
+          &mt RCMD BSPC               // Right Command
           &none                         // Right Option
 
         >;
