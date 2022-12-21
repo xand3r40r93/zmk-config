@@ -20,11 +20,11 @@
 
 #define TAP_DANCE(NAME, KEY1, KEY2) \
   tp_##NAME: tp_##NAME { \
-    compatible = "zmk,behavior-tap-dance";
-      label = #NAME;
-      #binding-cells = <0>;
-      bindings = <&kp KEY1>, <&kp KEY2>;
-      tapping-term-ms = <200>;
+    compatible = "zmk,behavior-tap-dance"; \
+      label = #NAME; \
+      #binding-cells = <0>; \
+      bindings = <&kp KEY1>, <&kp KEY2>; \
+      tapping-term-ms = <200>; \
   };
 
 #define L_DEF 0
