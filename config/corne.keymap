@@ -18,12 +18,12 @@
     keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
   };
 
-#define TAP_DANCE(NAME, KEY, KEY) \
+#define TAP_DANCE(NAME, KEY1, KEY2) \
   tp_##NAME: tp_##NAME { \
     compatible = "zmk,behavior-tap-dance";
       label = #NAME;
       #binding-cells = <0>;
-      bindings = <&kp KEY>, <&kp KEY>;
+      bindings = <&kp KEY1>, <&kp KEY2>;
       tapping-term-ms = <200>;
   };
 
