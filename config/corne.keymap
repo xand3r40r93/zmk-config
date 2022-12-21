@@ -92,10 +92,10 @@
   keymap {
     compatible = "zmk,keymap";
 
-      L_DEF_layer {
+      default_layer {
         bindings = <
 
-          &ht_b ESC GRAVE               // Tab       -> Esc |
+          &gresc                        // Tab       -> Esc |
           &kp Q                         // q         -> q   | Q
           &kp W                         // w         -> w   | W
           &kp E                         // e         -> e   | E
@@ -107,21 +107,21 @@
           &kp I                         // i         -> i   | I
           &kp O                         // o         -> o   | O
           &kp P                         // p         -> p   | P
-          &mm_equal                     // \         -> =   | _
+          &kp EQUAL                     // \         -> =   | _
 
           &kp TAB                       // Caps Lock
-          &mt_l LCTRL A                 // a
-          &mt_l LALT  S                 // s
-          &mt_l LSHFT D                 // d
-          &mt_l LCMD  F                 // f
+          &mt_l LSHFT A                 // a
+          &mt_l LCTRL S                 // s
+          &mt_l LALT  D                 // d
+          &lt_b L_LNAV F                // f
           &kp G                         // g
 
           &kp H                         // h
-          &mt_r RCMD  J                 // j
-          &mt_r RSHFT K                 // k
-          &mt_r RALT  L                 // l
-          &mm_sqt                       // ;
-          &kp RET                       // '
+          &lt_b L_RNAV J                // j
+          &mt_r RALT  K                 // k
+          &mt_r RCTRL L                 // l
+          &mt_r RSHFT SQT               // ;
+          &none                         // '
           
           &none                         // Left Shift
           &kp Z                         // z
@@ -130,7 +130,7 @@
           &kp V                         // v
           &kp B                         // b
 
-          &kp N                         // n
+          &lt_b L_NUM N                 // n
           &kp M                         // m
           &kp COMMA                     // ,
           &kp DOT                       // .
@@ -138,11 +138,11 @@
           &kp RET                       // Right Shift    -> RET 
 
           &none                         // Left Option
-          &none                         // Left Command
-          &lt_b L_LNAV SPACE            // Space
+          &mt_l LCMD DEL                // Left Command
+          &kp SPACE                     // Space
 
-          &lt_b L_RNAV SPACE            // Space
-          &lt_b L_NUM BSPC              // Right Command
+          &kp SPACE                     // Space
+          &mt_r RCMD BSPC               // Right Command
           &none                         // Right Option
 
         >;
@@ -166,10 +166,10 @@
           &kp BSPC
 
           &none
-          &mt_l LCTRL F5
-          &mt_l LALT  F6
-          &mt_l LSHFT F7
-          &mt_l LCMD  F8
+          &mt_l LSHFT F5
+          &mt_l LCTRL F6
+          &mt_l LALT  F7
+          &kp F8
           &none
 
           &none
@@ -194,10 +194,10 @@
           &kp RET
 
           &none
-          &none
-          &none
+          &kp LCMD
+          &kp SPACE
 
-          &none
+          &kp SPACE
           &none
           &none
 
@@ -229,10 +229,10 @@
           &none
 
           &none
-          &mt_r RCMD  LEFT
-          &mt_r RSHFT DOWN
-          &mt_r RALT  RIGHT
-          &mt_r RCTRL PG_DN
+          &kp LEFT
+          &mt_r RALT  DOWN
+          &mt_r RCTRL RIGHT
+          &mt_r RSHFT PG_DN
           &none
 
           &none
@@ -251,10 +251,10 @@
 
           &none
           &none
-          &none
+          &kp SPACE
 
-          &none
-          &none
+          &kp SPACE
+          &kp RCMD
           &none
 
         >;
