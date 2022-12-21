@@ -107,7 +107,7 @@
       default_layer {
         bindings = <
 
-          &td_grave                     // Tab       -> Esc |
+          &kp GRAVE                     // Tab       -> Esc |
           &kp Q                         // q         -> q   | Q
           &kp W                         // w         -> w   | W
           &kp E                         // e         -> e   | E
@@ -121,7 +121,7 @@
           &kp P                         // p         -> p   | P
           &td_brackets                  // \         -> =   | _
 
-          &td_tab                       // Caps Lock
+          &kp TAB                       // Caps Lock
           &mt_l LSHFT A                 // a
           &mt_l LCTRL S                 // s
           &mt_l LALT  D                 // d
@@ -149,7 +149,7 @@
           &kp FSLH                      // /
           &kp RET                       // Right Shift    -> RET 
 
-          &none                         // Left Option
+          &kp ESC                         // Left Option
           &mt LCMD DEL                  // Left Command
           &kp SPACE                     // Space
 
