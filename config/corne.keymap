@@ -18,13 +18,13 @@
     keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
   };
 
-#define DEFAULT 0
-#define NAVIGATION_LEFT 1
-#define NAVIGATION_RIGHT 2
-#define NUMBER 3
+#define L_DEF 0
+#define L_LNAV 1
+#define L_RNAV 2
+#define L_NUM 3
 
 // KEY POSITION REFERENCE
-// ------------------------------------------------------------------------
+// ------------------------------------------------------------------
 // | 00 | 01 | 02 | 03 | 04 | 05 |    | 06 | 07 | 08 | 09 | 10 | 11 |
 // | 12 | 13 | 14 | 15 | 16 | 17 |    | 18 | 19 | 20 | 21 | 22 | 23 |
 // | 24 | 25 | 26 | 27 | 28 | 29 |    | 30 | 31 | 32 | 33 | 34 | 35 |
@@ -94,7 +94,7 @@
   keymap {
     compatible = "zmk,keymap";
 
-      default_layer {
+      L_DEF_layer {
         bindings = <
 
           &ht_b ESC GRAVE               // Tab       -> Esc |
@@ -141,10 +141,10 @@
 
           &none                         // Left Option
           &none                         // Left Command
-          &lt_b NAVIGATION_LEFT SPACE   // Space
+          &lt_b L_LNAV SPACE            // Space
 
-          &lt_b NAVIGATION_RIGHT SPACE  // Space
-          &lt_b NUMBERS BSPC            // Right Command
+          &lt_b L_RNAV SPACE            // Space
+          &lt_b L_NUM BSPC              // Right Command
           &none                         // Right Option
 
         >;
