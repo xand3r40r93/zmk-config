@@ -18,9 +18,18 @@
     keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
   };
 
+#define TAP_DANCE(NAME, KEY, KEY) \
+  tp_##NAME: tp_##NAME { \
+    compatible = "zmk,behavior-tap-dance";
+      label = #NAME;
+      #binding-cells = <0>;
+      bindings = <&kp KEY>, <&kp KEY>;
+      tapping-term-ms = <200>;
+  };
+
 #define L_DEF 0
 #define L_NAV 1
-#define L_FN 2
+#define L_FN  2
 #define L_NUM 3
 
 // KEY POSITION REFERENCE
@@ -87,6 +96,9 @@
     };
     MOD_MORPH_SHIFT(sqt, SQT, GRAVE)     // ' | `
     MOD_MORPH_SHIFT(equal, EQUAL, UNDER) // = | _
+    TAP_DANCE(grave, GRAVE, ESC)
+    TAP_DANCE(brackets, LBKT, RBKT)
+    TAP_DANCE(tab, TAB, CLCK)
   };
 
   keymap {
@@ -95,7 +107,7 @@
       default_layer {
         bindings = <
 
-          &kp GRAVE                     // Tab       -> Esc |
+          &td_grave                     // Tab       -> Esc |
           &kp Q                         // q         -> q   | Q
           &kp W                         // w         -> w   | W
           &kp E                         // e         -> e   | E
@@ -107,9 +119,9 @@
           &kp I                         // i         -> i   | I
           &kp O                         // o         -> o   | O
           &kp P                         // p         -> p   | P
-          &kp EQUAL                     // \         -> =   | _
+          &td_brackets                  // \         -> =   | _
 
-          &kp TAB                       // Caps Lock
+          &td_tab                       // Caps Lock
           &mt_l LSHFT A                 // a
           &mt_l LCTRL S                 // s
           &mt_l LALT  D                 // d
@@ -120,8 +132,8 @@
           &lt_b L_FN J                  // j
           &mt_r RALT  K                 // k
           &mt_r RCTRL L                 // l
-          &mt_r RSHFT SQT               // ;
-          &none                         // '
+          &mt_r RSHFT SEMI              // ;
+          &kp SQT                       // '
           
           &none                         // Left Shift
           &kp Z                         // z
