@@ -205,7 +205,7 @@
         >;
       };
 
-      navigation_layer_RIGHT {
+      navigation_layer_right {
         bindings = <
 
           &kp ESC
@@ -315,7 +315,7 @@
           &none
 
         >;
-      }
+      };
 
       lower_layer {
         bindings = <
