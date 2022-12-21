@@ -18,13 +18,13 @@
     keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
   };
 
-#define TAP_DANCE(NAME, KEY1, KEY2) \
+#define TAP_DANCE(NAME, KEY1, KEY2, MS) \
   td_##NAME: td_##NAME { \
     compatible = "zmk,behavior-tap-dance"; \
       label = #NAME; \
       #binding-cells = <0>; \
       bindings = <&kp KEY1>, <&kp KEY2>; \
-      tapping-term-ms = <200>; \
+      tapping-term-ms = <MS>; \
   };
 
 #define L_DEF 0
@@ -98,7 +98,7 @@
     MOD_MORPH_SHIFT(equal, EQUAL, UNDER) // = | _
     TAP_DANCE(grave, GRAVE, ESC)
     TAP_DANCE(brackets, LBKT, RBKT)
-    TAP_DANCE(tab, TAB, CLCK)
+    TAP_DANCE(tab, TAB, CLCK, 100)
   };
 
   keymap {
@@ -126,10 +126,10 @@
           &mt_l LCTRL S                 // s
           &mt_l LALT  D                 // d
           &lt_b L_NAV F                 // f
-          &kp G                         // g
+          &lt_b L_FN G                  // g
 
           &kp H                         // h
-          &lt_b L_FN J                  // j
+          &kp J                  // j
           &mt_r RALT  K                 // k
           &mt_r RCTRL L                 // l
           &mt_r RSHFT SEMI              // ;
@@ -139,10 +139,10 @@
           &kp Z                         // z
           &kp X                         // x
           &kp C                         // c
-          &kp V                         // v
+          &lt_b L_NUM V                 // v
           &kp B                         // b
 
-          &lt_b L_NUM N                 // n
+          &kp N                         // n
           &kp M                         // m
           &kp COMMA                     // ,
           &kp DOT                       // .
@@ -170,12 +170,12 @@
           &none
           &none
 
-          &none
+          &kp PG_UP
           &kp HOME
           &kp UP
           &kp END
-          &kp PG_UP
           &kp BSPC
+          &none
 
           &none
           &kp LSHFT
@@ -184,26 +184,26 @@
           &none
           &none
 
-          &none
+          &kp PG_DN
           &kp LEFT
           &kp DOWN
           &kp RIGHT
-          &kp PG_DN
-          &none
-
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
-
-          &none
-          &none
-          &none
-          &none
-          &none
           &kp RET
+          &none
+
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
+
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
 
           &none
           &kp LCMD
@@ -275,45 +275,45 @@
       number_layer {
         bindings = <
           
-          &kp ESC
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
+           
+          &none
+          &kp N7
+          &kp N8
+          &kp N9
+          &none
+          &none
+
+          &none
+          &kp LSHFT
+          &kp LCTRL
+          &kp LALT
+          &none
+          &none
+
+          &none
+          &kp N4
+          &kp N5
+          &kp N6
+          &none
+          &none
+
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
+
+          &none
           &kp N1
           &kp N2
           &kp N3
-          &kp N4
-          &none
-
-          &none
-          &kp N5
-          &kp N6
-          &kp N7
-          &kp N8
-          &none
-
-          &none
-          &kp N9
-          &kp N0
-          &none
-          &none
-          &none
-
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
-
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
-
-          &none
-          &none
-          &none
-          &none
           &none
           &kp RET
 
@@ -321,7 +321,7 @@
           &none
           &none
 
-          &none
+          &kp N0
           &none
           &none
 
