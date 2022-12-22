@@ -397,9 +397,9 @@
         &none
 
         &none
-        &none
+        &kp RS(RC(RA(RG(HOME))))
         &kp RS(RC(RA(RG(UP))))
-        &none
+        &kp RS(RC(RA(RG(END))))
         &none
         &none
 
