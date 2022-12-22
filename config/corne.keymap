@@ -121,7 +121,7 @@
           &kp P                         // p         -> p   | P
           &td_brackets                  // \         -> =   | _
 
-          &kp TAB                       // Caps Lock
+          &mt CLCK TAB                  // Caps Lock
           &mt_l LSHFT A                 // a
           &mt_l LCTRL S                 // s
           &mt_l LALT  D                 // d
@@ -129,7 +129,7 @@
           &lt_b L_FN G                  // g
 
           &kp H                         // h
-          &kp J                  // j
+          &kp J                         // j
           &mt_r RALT  K                 // k
           &mt_r RCTRL L                 // l
           &mt_r RSHFT SEMI              // ;
@@ -147,15 +147,15 @@
           &kp COMMA                     // ,
           &kp DOT                       // .
           &kp FSLH                      // /
-          &kp RET                       // Right Shift    -> RET 
+          &none                         // Right Shift    -> RET 
 
-          &kp ESC                         // Left Option
-          &mt LCMD DEL                  // Left Command
+          &kp ESC                       // Left Option
+          &kp LCMD                      // Left Command
           &kp SPACE                     // Space
 
           &kp SPACE                     // Space
-          &mt RCMD BSPC                 // Right Command
-          &none                         // Right Option
+          &mt RCMD RET                  // Right Command
+          &kp BSPC                      // Right Option
 
         >;
       };
