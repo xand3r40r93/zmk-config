@@ -235,8 +235,8 @@
 
           &none
           &kp LSHFT
-          &kp LALT
           &kp LCTRL
+          &kp LALT
           &none
           &none
 
