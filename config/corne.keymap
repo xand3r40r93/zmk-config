@@ -398,7 +398,7 @@
 
         &none
         &none
-        &kp LS(LC(LA(LG(UP))))
+        &kp RS(RC(RA(RG(UP))))
         &none
         &none
         &none
@@ -411,9 +411,9 @@
         &none
 
         &none
-        &kp LS(LC(LA(LG(LEFT))))
-        &kp LS(LC(LA(LG(DOWN))))
-        &kp LS(LC(LA(LG(RIGHT))))
+        &kp RS(RC(RA(RG(LEFT))))
+        &kp RS(RC(RA(RG(DOWN))))
+        &kp RS(RC(RA(RG(RIGHT))))
         &none
         &none
 
