@@ -335,7 +335,7 @@
           &none
           &kp RBRC
           &kp RPAR
-          &kp RT
+          &kp GT
           &kp RBKT
           &kp FSLH
 
@@ -365,7 +365,7 @@
           &none
           &kp UNDER
           &kp EQUAL
-          &none
+          &kp BSLH
 
           &none
           &none
