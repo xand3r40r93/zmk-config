@@ -105,288 +105,288 @@
   keymap {
     compatible = "zmk,keymap";
 
-      default_layer {
-        bindings = <
+    default_layer {
+      bindings = <
 
-          &kp GRAVE                     // Tab       -> Esc |
-          &kp Q                         // q         -> q   | Q
-          &kp W                         // w         -> w   | W
-          &kp E                         // e         -> e   | E
-          &kp R                         // r         -> r   | R
-          &kp T                         // t         -> t   | T
+        &kp GRAVE                     // Tab       -> Esc |
+        &kp Q                         // q         -> q   | Q
+        &kp W                         // w         -> w   | W
+        &kp E                         // e         -> e   | E
+        &kp R                         // r         -> r   | R
+        &kp T                         // t         -> t   | T
 
-          &kp Y                         // y         -> y   | Y
-          &kp U                         // u         -> u   | U
-          &kp I                         // i         -> i   | I
-          &kp O                         // o         -> o   | O
-          &kp P                         // p         -> p   | P
-          &td_brackets                  // \         -> =   | _
+        &kp Y                         // y         -> y   | Y
+        &kp U                         // u         -> u   | U
+        &kp I                         // i         -> i   | I
+        &kp O                         // o         -> o   | O
+        &kp P                         // p         -> p   | P
+        &td_brackets                  // \         -> =   | _
 
-          &mt CLCK TAB                  // Caps Lock
-          &mt_l LSHFT A                 // a
-          &mt_l LCTRL S                 // s
-          &mt_l LALT D                  // d
-          &lt_b L_NAV F                 // f
-          &kp G                         // g
+        &mt CLCK TAB                  // Caps Lock
+        &mt_l LSHFT A                 // a
+        &mt_l LCTRL S                 // s
+        &mt_l LALT D                  // d
+        &lt_b L_NAV F                 // f
+        &kp G                         // g
 
-          &kp H                         // h
-          &lt_b L_PROG J                // j
-          &mt_r RALT K                  // k
-          &mt_r RCTRL L                 // l
-          &mt_r RSHFT SEMI              // ;
-          &kp SQT                       // '
-          
-          &none                         // Left Shift
-          &kp Z                         // z
-          &kp X                         // x
-          &kp C                         // c
-          &lt_b L_NUM V                 // v
-          &kp B                         // b
-
-          &kp N                         // n
-          &lt_b L_FN M                  // m
-          &kp COMMA                     // ,
-          &kp DOT                       // .
-          &kp FSLH                      // /
-          &none                         // Right Shift    -> RET 
-
-          &kp ESC                       // Left Option
-          &kp LCMD                      // Left Command
-          &kp SPACE                     // Space
-
-          &kp SPACE                     // Space
-          &mt RCMD RET                  // Right Command
-          &kp BSPC                      // Right Option
-
-        >;
-      };
-
-      navigation_layer {
-        bindings = <
-
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
-
-          &kp PG_UP
-          &kp HOME
-          &kp UP
-          &kp END
-          &kp BSPC
-          &none
-
-          &none
-          &kp LSHFT
-          &kp LCTRL
-          &kp LALT
-          &none
-          &none
-
-          &kp PG_DN
-          &kp LEFT
-          &kp DOWN
-          &kp RIGHT
-          &kp RET
-          &none
-
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
-
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
-
-          &trans
-          &trans
-          &trans
-
-          &trans
-          &trans
-          &trans
-
-        >;
-      };
-
-      fn_layer {
-        bindings = <
-
-          &none
-          &kp F1
-          &kp F2
-          &kp F3
-          &kp F4
-          &none
-
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
-
-          &none
-          &kp F5
-          &kp F6
-          &kp F7
-          &kp F8
-          &none
-
-          &none
-          &none
-          &kp RALT
-          &kp RCTRL
-          &kp RSHFT
-          &none
-
-          &none
-          &kp F9
-          &kp F10
-          &kp F11
-          &kp F12
-          &none
-
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
-
-          &trans
-          &trans
-          &trans
-
-          &trans
-          &trans
-          &trans
-
-        >;
-      };
-
-      number_layer {
-        bindings = <
-          
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
-
-          &kp FSLH
-          &kp N7
-          &kp N8
-          &kp N9
-          &kp MINUS
-          &none
-
-          &none
-          &kp LSHFT
-          &kp LCTRL
-          &kp LALT
-          &none
-          &none
-
-          &kp STAR
-          &kp N4
-          &kp N5
-          &kp N6
-          &kp LS(PLUS)
-          &none
-
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
-
-          &kp EQUAL
-          &kp N1
-          &kp N2
-          &kp N3
-          &kp DOT
-          &kp RET
-
-          &trans
-          &trans
-          &trans
-
-          &kp N0
-          &trans
-          &trans
-
-        >;
-      };
-
-      programmer_layer {
-        bindings = <
+        &kp H                         // h
+        &lt_b L_PROG J                // j
+        &mt_r RALT K                  // k
+        &mt_r RCTRL L                 // l
+        &mt_r RSHFT SEMI              // ;
+        &kp SQT                       // '
         
-          &none
-          &kp RBRC
-          &kp RPAR
-          &kp GT
-          &kp RBKT
-          &kp FSLH
+        &none                         // Left Shift
+        &kp Z                         // z
+        &kp X                         // x
+        &kp C                         // c
+        &lt_b L_NUM V                 // v
+        &kp B                         // b
 
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
+        &kp N                         // n
+        &lt_b L_FN M                  // m
+        &kp COMMA                     // ,
+        &kp DOT                       // .
+        &kp FSLH                      // /
+        &none                         // Right Shift    -> RET 
 
-          &none
-          &kp LBRC
-          &kp LPAR
-          &kp LT
-          &kp LBKT
-          &kp PIPE
+        &kp ESC                       // Left Option
+        &kp LCMD                      // Left Command
+        &kp SPACE                     // Space
 
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
+        &kp SPACE                     // Space
+        &mt RCMD RET                  // Right Command
+        &kp BSPC                      // Right Option
 
-          &none
-          &kp EXCL
-          &none
-          &kp UNDER
-          &kp EQUAL
-          &kp BSLH
+      >;
+    };
 
-          &none
-          &none
-          &none
-          &none
-          &none
-          &none
+    navigation_layer {
+      bindings = <
 
-          &trans
-          &trans
-          &trans
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
 
-          &trans
-          &trans
-          &trans
+        &kp PG_UP
+        &kp HOME
+        &kp UP
+        &kp END
+        &kp BSPC
+        &none
+
+        &none
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
+        &none
+        &none
+
+        &kp PG_DN
+        &kp LEFT
+        &kp DOWN
+        &kp RIGHT
+        &kp RET
+        &none
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &trans
+        &trans
+        &trans
+
+        &trans
+        &trans
+        &trans
+
+      >;
+    };
+
+    fn_layer {
+      bindings = <
+
+        &none
+        &kp F1
+        &kp F2
+        &kp F3
+        &kp F4
+        &none
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &none
+        &kp F5
+        &kp F6
+        &kp F7
+        &kp F8
+        &none
+
+        &none
+        &none
+        &kp RALT
+        &kp RCTRL
+        &kp RSHFT
+        &none
+
+        &none
+        &kp F9
+        &kp F10
+        &kp F11
+        &kp F12
+        &none
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &trans
+        &trans
+        &trans
+
+        &trans
+        &trans
+        &trans
+
+      >;
+    };
+
+    number_layer {
+      bindings = <
         
-        >;
-      };
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
 
-      lower_layer {
-        bindings = <
+        &kp FSLH
+        &kp N7
+        &kp N8
+        &kp N9
+        &kp MINUS
+        &none
+
+        &none
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
+        &none
+        &none
+
+        &kp STAR
+        &kp N4
+        &kp N5
+        &kp N6
+        &kp LS(PLUS)
+        &none
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &kp EQUAL
+        &kp N1
+        &kp N2
+        &kp N3
+        &kp DOT
+        &kp RET
+
+        &trans
+        &trans
+        &trans
+
+        &kp N0
+        &trans
+        &trans
+
+      >;
+    };
+
+    programmer_layer {
+      bindings = <
+      
+        &none
+        &kp RBRC
+        &kp RPAR
+        &kp GT
+        &kp RBKT
+        &kp FSLH
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &none
+        &kp LBRC
+        &kp LPAR
+        &kp LT
+        &kp LBKT
+        &kp PIPE
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &none
+        &kp EXCL
+        &none
+        &kp UNDER
+        &kp EQUAL
+        &kp BSLH
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &trans
+        &trans
+        &trans
+
+        &trans
+        &trans
+        &trans
+      
+      >;
+    };
+
+    lower_layer {
+      bindings = <
 
         &kp TAB
         &kp N1
