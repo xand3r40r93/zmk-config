@@ -205,13 +205,13 @@
           &none
           &none
 
-          &none
-          &kp LCMD
-          &kp SPACE
+          &trans
+          &trans
+          &trans
 
-          &kp SPACE
-          &none
-          &none
+          &trans
+          &trans
+          &trans
 
         >;
       };
@@ -261,13 +261,13 @@
           &kp F10
           &none
 
-          &none
-          &kp LCMD
-          &kp SPACE
+          &trans
+          &trans
+          &trans
 
-          &kp SPACE
-          &none
-          &none
+          &trans
+          &trans
+          &trans
 
         >;
       };
@@ -317,13 +317,13 @@
           &none
           &kp RET
 
-          &none
-          &kp LCMD
-          &none
+          &trans
+          &trans
+          &trans
 
           &kp N0
-          &kp RCMD
-          &none
+          &trans
+          &trans
 
         >;
       };
