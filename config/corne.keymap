@@ -31,6 +31,7 @@
 #define L_NAV 1
 #define L_FN  2
 #define L_NUM 3
+#define L_PROG 4
 
 // KEY POSITION REFERENCE
 // ------------------------------------------------------------------
@@ -112,7 +113,7 @@
           &kp W                         // w         -> w   | W
           &kp E                         // e         -> e   | E
           &kp R                         // r         -> r   | R
-          &lt_b L_FN T                  // t         -> t   | T
+          &kp T                         // t         -> t   | T
 
           &kp Y                         // y         -> y   | Y
           &kp U                         // u         -> u   | U
@@ -124,13 +125,13 @@
           &mt CLCK TAB                  // Caps Lock
           &mt_l LSHFT A                 // a
           &mt_l LCTRL S                 // s
-          &mt_l LALT  D                 // d
+          &mt_l LALT D                  // d
           &lt_b L_NAV F                 // f
           &kp G                         // g
 
           &kp H                         // h
-          &kp J                         // j
-          &mt_r RALT  K                 // k
+          &lt_b L_PROG J                // j
+          &mt_r RALT K                  // k
           &mt_r RCTRL L                 // l
           &mt_r RSHFT SEMI              // ;
           &kp SQT                       // '
@@ -143,7 +144,7 @@
           &kp B                         // b
 
           &kp N                         // n
-          &kp M                         // m
+          &lt_b L_FN M                  // m
           &kp COMMA                     // ,
           &kp DOT                       // .
           &kp FSLH                      // /
@@ -220,6 +221,13 @@
         bindings = <
 
           &none
+          &kp F1
+          &kp F2
+          &kp F3
+          &kp F4
+          &none
+
+          &none
           &none
           &none
           &none
@@ -227,38 +235,31 @@
           &none
 
           &none
+          &kp F5
+          &kp F6
           &kp F7
           &kp F8
+          &none
+
+          &none
+          &none
+          &kp RALT
+          &kp RCTRL
+          &kp RSHFT
+          &none
+
+          &none
           &kp F9
+          &kp F10
+          &kp F11
           &kp F12
           &none
 
           &none
-          &kp LSHFT
-          &kp LCTRL
-          &kp LALT
-          &none
-          &none
-
-          &none
-          &kp F4
-          &kp F5
-          &kp F6
-          &kp F11
-          &none
-
           &none
           &none
           &none
           &none
-          &none
-          &none
-
-          &none
-          &kp F1
-          &kp F2
-          &kp F3
-          &kp F10
           &none
 
           &trans
@@ -325,6 +326,62 @@
           &trans
           &trans
 
+        >;
+      };
+
+      programmer_layer {
+        bindings = <
+        
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
+
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
+
+          &none
+          &kp LS(LBRC)
+          &kp LS(LPAR)
+          &kp LS(LT)
+          &kp LBKT
+          &none
+
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
+
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
+
+          &none
+          &none
+          &none
+          &none
+          &none
+          &none
+
+          &trans
+          &trans
+          &trans
+
+          &trans
+          &trans
+          &trans
+        
         >;
       };
 
