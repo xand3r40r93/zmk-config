@@ -318,11 +318,11 @@
           &kp RET
 
           &none
-          &none
+          &kp LCMD
           &none
 
           &kp N0
-          &none
+          &kp RCMD
           &none
 
         >;
