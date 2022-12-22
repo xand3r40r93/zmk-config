@@ -333,11 +333,11 @@
         bindings = <
         
           &none
-          &none
-          &none
-          &none
-          &none
-          &none
+          &kp RBRC
+          &kp RPAR
+          &kp RT
+          &kp RBKT
+          &kp FSLH
 
           &none
           &none
@@ -347,11 +347,11 @@
           &none
 
           &none
-          &kp LS(LBRC)
-          &kp LS(LPAR)
-          &kp LS(LT)
+          &kp LBRC
+          &kp LPAR
+          &kp LT
           &kp LBKT
-          &none
+          &kp PIPE
 
           &none
           &none
@@ -361,10 +361,10 @@
           &none
 
           &none
+          &kp EXCL
           &none
-          &none
-          &none
-          &none
+          &kp UNDER
+          &kp EQUAL
           &none
 
           &none
