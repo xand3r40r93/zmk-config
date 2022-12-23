@@ -33,6 +33,7 @@
 #define L_NUM 3
 #define L_PROG 4
 #define L_MOUSE 5
+#define L_SYMBOL 6
 
 // KEY POSITION REFERENCE
 // ------------------------------------------------------------------
@@ -128,9 +129,9 @@
         &mt_l LCTRL S                 // s
         &mt_l LALT D                  // d
         &lt_b L_NAV F                 // f
-        &lt_b L_MOUSE G                         // g
+        &lt_b L_MOUSE G               // g
 
-        &kp H                         // h
+        &lt_b L_SYMBOL H              // h
         &lt_b L_PROG J                // j
         &mt_r RALT K                  // k
         &mt_r RCTRL L                 // l
@@ -442,6 +443,62 @@
       >;
     };
 
+    symbol_layer {
+      bindings = <
+      
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+        
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+        
+        &none
+        &PRCNT
+        &CARET
+        &PIPE
+        &AMPS
+        &none
+        
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &none
+        &EXCL
+        &DLLR
+        &HASH
+        &AT
+        &none
+        
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+        
+        &trans
+        &trans
+        &trans
+
+        &trans
+        &trans
+        &trans
+
+      >;
+    };
+    
     lower_layer {
       bindings = <
 
