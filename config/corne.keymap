@@ -447,13 +447,6 @@
       bindings = <
       
         &none
-        &none
-        &none
-        &none
-        &none
-        &none
-        
-        &none
         &kp PRCNT
         &kp CARET
         &kp PIPE
@@ -472,6 +465,13 @@
         &kp DLLR
         &kp HASH
         &kp AT
+        &none
+        
+        &none
+        &none
+        &none
+        &none
+        &none
         &none
         
         &none
