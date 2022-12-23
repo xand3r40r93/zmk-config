@@ -334,10 +334,10 @@
       bindings = <
       
         &none
-        &kp RBKT
-        &kp GT
-        &kp RPAR
-        &kp RBRC
+        &kp LBKT
+        &kp LT
+        &kp LPAR
+        &kp LBRC
         &kp FSLH
 
         &none
@@ -362,10 +362,10 @@
         &none
 
         &none
-        &kp LBKT
-        &kp LT
-        &kp LPAR
-        &kp LBRC
+        &kp RBKT
+        &kp GT
+        &kp RPAR
+        &kp RBRC
         &kp BSLH
 
         &none
