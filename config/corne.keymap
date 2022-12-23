@@ -348,10 +348,10 @@
         &none
 
         &none
-        &kp LBKT
-        &kp LT
-        &kp LPAR
-        &kp LBRC
+        &kp EXCL
+        &none
+        &kp UNDER
+        &kp EQUAL
         &kp PIPE
 
         &none
@@ -362,10 +362,10 @@
         &none
 
         &none
-        &kp EXCL
-        &none
-        &kp UNDER
-        &kp EQUAL
+        &kp LBKT
+        &kp LT
+        &kp LPAR
+        &kp LBRC
         &kp BSLH
 
         &none
