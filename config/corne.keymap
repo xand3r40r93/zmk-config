@@ -138,7 +138,7 @@
         &mt_r RSHFT SEMI              // ;
         &kp SQT                       // '
         
-        &none                         // Left Shift
+        &kp ESC                       // Left Shift
         &kp Z                         // z
         &kp X                         // x
         &kp C                         // c
@@ -150,7 +150,7 @@
         &kp COMMA                     // ,
         &kp DOT                       // .
         &kp FSLH                      // /
-        &none                         // Right Shift    -> RET 
+        &kp BSPC                      // Right Shift    -> RET 
 
         &kp ESC                       // Left Option
         &kp LCMD                      // Left Command
@@ -194,7 +194,7 @@
         &kp RET
         &none
 
-        &none
+        &trans
         &none
         &none
         &none
@@ -206,7 +206,7 @@
         &none
         &none
         &none
-        &none
+        &trans
 
         &trans
         &trans
@@ -250,7 +250,7 @@
         &kp RSHFT
         &none
 
-        &none
+        &trans
         &kp F9
         &kp F10
         &kp F11
@@ -262,7 +262,7 @@
         &none
         &none
         &none
-        &none
+        &trans
 
         &trans
         &trans
@@ -306,7 +306,7 @@
         &kp LS(PLUS)
         &none
 
-        &none
+        &trans
         &none
         &none
         &none
@@ -318,7 +318,7 @@
         &kp N2
         &kp N3
         &kp DOT
-        &kp RET
+        &trans
 
         &trans
         &trans
@@ -362,7 +362,7 @@
         &none
         &none
 
-        &none
+        &trans
         &kp RBKT
         &kp GT
         &kp RPAR
@@ -374,7 +374,7 @@
         &none
         &none
         &none
-        &none
+        &trans
 
         &trans
         &trans
@@ -474,7 +474,7 @@
         &none
         &none
         
-        &none
+        &trans
         &none
         &none
         &none
@@ -486,7 +486,7 @@
         &none
         &none
         &none
-        &none
+        &trans
         
         &trans
         &trans
