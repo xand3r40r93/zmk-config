@@ -454,17 +454,10 @@
         &none
         
         &none
-        &none
-        &none
-        &none
-        &none
-        &none
-        
-        &none
-        &PRCNT
-        &CARET
-        &PIPE
-        &AMPS
+        &kp PRCNT
+        &kp CARET
+        &kp PIPE
+        &kp AMPS
         &none
         
         &none
@@ -475,10 +468,17 @@
         &none
 
         &none
-        &EXCL
-        &DLLR
-        &HASH
-        &AT
+        &kp EXCL
+        &kp DLLR
+        &kp HASH
+        &kp AT
+        &none
+        
+        &none
+        &none
+        &none
+        &none
+        &none
         &none
         
         &none
