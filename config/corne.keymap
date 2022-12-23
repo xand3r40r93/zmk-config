@@ -404,7 +404,7 @@
         &none
 
         &none
-        &kp LSHFT
+        &kp RS(RC(RA(RG(LSHFT))))
         &kp LCTRL
         &kp LALT
         &none
