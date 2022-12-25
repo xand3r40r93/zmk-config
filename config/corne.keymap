@@ -93,30 +93,13 @@
       tapping-term-ms = <200>;
       quick-tap-ms = <200>;
     };
-    MOD_MORPH_SHIFT(sqt, SQT, GRAVE)     // ' | `
-    MOD_MORPH_SHIFT(equal, EQUAL, UNDER) // = | _
-    TAP_DANCE(grave, GRAVE, ESC)
-    TAP_DANCE(lbkt_rbkt, LBKT, RBKT)
-//    TAP_DANCE(fslh_bslh, FSLH, BSLH)
-    td_fslh_bslh: td_fslh_bslh { \
-      compatible = "zmk,behavior-tap-dance"; \
-        label = "fslh_bslh"; \
-        #binding-cells = <0>; \
-        bindings = <&mt_r LS(LC(LA(LCMD))) FSLH>, <&kp BSLH>; \
-        tapping-term-ms = <200>; \
-    };
-    TAP_DANCE(lpar_rpar, LPAR, RPAR)
-    TAP_DANCE(lbrc_rbrc, LBRC, RBRC)
-    TAP_DANCE(lt_gt, LT, GT)
-    TAP_DANCE(excl_qmark, EXCL, QMARK)
-    MOD_MORPH_SHIFT(equal_under, EQUAL, UNDER)     // ' | `
-    td: tap_dance { \
-      compatible = "zmk,behavior-tap-dance"; \
-        label = "TAP_DANCE"; \
-        #binding-cells = <2>; \
-        bindings = <&kp>, <&kp>; \
-        tapping-term-ms = <200>; \
-    };
+    TAP_DANCE(lbkt_rbkt, &kp LBKT, &kp RBKT)
+    TAP_DANCE(fslh_bslh, &mt_r LS(LC(LA(LCMD))) FSLH, BSLH)
+    TAP_DANCE(lpar_rpar, &kp LPAR, &kp RPAR)
+    TAP_DANCE(lbrc_rbrc, &kp LBRC, &kp RBRC)
+    TAP_DANCE(lt_gt, &kp LT, &kp GT)
+    TAP_DANCE(excl_qmark, &kp EXCL, &kp QMARK)
+    MOD_MORPH_SHIFT(equal_under, EQUAL, UNDER)
   };
 
   keymap {
@@ -137,7 +120,7 @@
         &kp I                         // i         -> i   | I
         &kp O                         // o         -> o   | O
         &kp P                         // p         -> p   | P
-        &td LBKT RBKT                 // \         -> =   | _
+        &td_lbkt_rbkt                 // \         -> =   | _
 
         &kp TAB                       // Caps Lock
         &mt_l LSHFT A                 // a
