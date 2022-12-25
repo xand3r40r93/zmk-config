@@ -70,7 +70,7 @@
     mt_r_fslh_bslh: mod_tap_right_fslh_bslh {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_RIGHT_FSLH_BSLH";
-      #binding-cells = <2>;
+      #binding-cells = <1>;
       bindings = <&kp>, <&mm_equal_under>;
       flavor = "hold-preferred";
       tapping-term-ms = <200>;
