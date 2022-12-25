@@ -7,7 +7,7 @@
     compatible = "zmk,behavior-mod-morph"; \
     label = #NAME; \
     #binding-cells = <0>; \
-    bindings = <&kp KEY>, <&kp MOD_KEY>; \
+    bindings = <KEY>, <MOD_KEY>; \
     mods = <(MOD_LSFT|MOD_RSFT)>; \
     keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
   };
@@ -99,7 +99,16 @@
     TAP_DANCE(lbkt_rbkt, &kp LBKT, &kp RBKT) // [ ]
     TAP_DANCE(hyper_fslh_bslh, &mt_r LS(LC(LA(LCMD))) FSLH, &kp BSLH)
     TAP_DANCE(excl_qmark, &kp EXCL, &kp QMARK)
-    MOD_MORPH_SHIFT(equal_under, EQUAL, UNDER)
+    ZMK_MACRO(zm_rbrc,
+      bindings
+      = <&macro_release &kp LSHIFT>
+      , <&macro_press &kp RBRC>
+      , <&macro_pause_for_release>
+      , <&macro_release &kp RBRC>
+      ;
+    )
+    MOD_MORPH_SHIFT(equal_under, &kp EQUAL, &kp UNDER)
+    MOD_MORPH_SHIFT(lbrc_rbrc, &kp LBRC, &zm_rbrc)
   };
 
   keymap {
@@ -340,7 +349,7 @@
         &none
 
         &kp PLUS
-        &td_lbrc_rbrc
+        &mm_lbrc_rbrc
         &td_lpar_rpar
         &td_lt_gt
         &td_lbkt_rbkt
