@@ -39,6 +39,16 @@
 / {
 
   behaviors {
+    MOD_MORPH_SHIFT(sqt, SQT, GRAVE)     // ' | `
+    MOD_MORPH_SHIFT(equal, EQUAL, UNDER) // = | _
+    TAP_DANCE(grave, GRAVE, ESC)
+    TAP_DANCE(lbkt_rbkt, LBKT, RBKT)
+    TAP_DANCE(fslh_bslh, FSLH, BSLH)
+    TAP_DANCE(lpar_rpar, LPAR, RPAR)
+    TAP_DANCE(lbrc_rbrc, LBRC, RBRC)
+    TAP_DANCE(lt_gt, LT, GT)
+    TAP_DANCE(excl_qmark, EXCL, QMARK)
+    MOD_MORPH_SHIFT(equal_under, EQUAL, UNDER)     // ' | `
     lt_b: layer_tap_balanced {
       compatible = "zmk,behavior-hold-tap";
       label = "LAYER_TAP_BALANCED";
@@ -70,8 +80,8 @@
     mt_r_fslh_bslh: mod_tap_right_fslh_bslh {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_RIGHT_FSLH_BSLH";
-      #binding-cells = <1>;
-      bindings = <&kp>, <&mm_equal_under>;
+      #binding-cells = <0>;
+      bindings = <&kp LS(LC(LA(LG)))>, <&mm_equal_under>;
       flavor = "hold-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <200>;
@@ -103,16 +113,6 @@
       tapping-term-ms = <200>;
       quick-tap-ms = <200>;
     };
-    MOD_MORPH_SHIFT(sqt, SQT, GRAVE)     // ' | `
-    MOD_MORPH_SHIFT(equal, EQUAL, UNDER) // = | _
-    TAP_DANCE(grave, GRAVE, ESC)
-    TAP_DANCE(lbkt_rbkt, LBKT, RBKT)
-    TAP_DANCE(fslh_bslh, FSLH, BSLH)
-    TAP_DANCE(lpar_rpar, LPAR, RPAR)
-    TAP_DANCE(lbrc_rbrc, LBRC, RBRC)
-    TAP_DANCE(lt_gt, LT, GT)
-    TAP_DANCE(excl_qmark, EXCL, QMARK)
-    MOD_MORPH_SHIFT(equal_under, EQUAL, UNDER)     // ' | `
   };
 
   keymap {
@@ -160,8 +160,8 @@
         &kp M                         // m
         &kp COMMA                     // ,
         &kp DOT                       // .
-        &td_fslh_bslh                 // /
-        &mt_r_fslh_bslh LS(LC(LA(LG))) // Right Shift    -> RET 
+        &mt_r_fslh_bslh               // /
+        &mm_equal_under               // Right Shift    -> RET 
 
         &kp ESC                       // Left Option
         &kp LCMD                      // Left Command
