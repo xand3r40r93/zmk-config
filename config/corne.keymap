@@ -93,11 +93,11 @@
       tapping-term-ms = <200>;
       quick-tap-ms = <200>;
     };
-    TAP_DANCE(lbkt_rbkt, &kp LBKT, &kp RBKT)
-    TAP_DANCE(fslh_bslh, &mt_r LS(LC(LA(LCMD))) FSLH, &kp BSLH)
-    TAP_DANCE(lpar_rpar, &kp LPAR, &kp RPAR)
-    TAP_DANCE(lbrc_rbrc, &kp LBRC, &kp RBRC)
-    TAP_DANCE(lt_gt, &kp LT, &kp GT)
+    TAP_DANCE(lbrc_rbrc, &kp LBRC, &kp RBRC) // { }
+    TAP_DANCE(lpar_rpar, &kp LPAR, &kp RPAR) // ( )
+    TAP_DANCE(lt_gt, &kp LT, &kp GT) // < >
+    TAP_DANCE(lbkt_rbkt, &kp LBKT, &kp RBKT) // [ ]
+    TAP_DANCE(hyper_fslh_bslh, &mt_r LS(LC(LA(LCMD))) FSLH, &kp BSLH)
     TAP_DANCE(excl_qmark, &kp EXCL, &kp QMARK)
     MOD_MORPH_SHIFT(equal_under, EQUAL, UNDER)
   };
@@ -147,7 +147,7 @@
         &kp M                         // m
         &kp COMMA                     // ,
         &kp DOT                       // .
-        &td_fslh_bslh                 // /
+        &td_hyper_fslh_bslh                 // /
         &mm_equal_under               // Right Shift    -> RET 
 
         &kp ESC                       // Left Option
@@ -193,14 +193,14 @@
         &none
 
         &none
-        &none
+        &kp RS(RC(RA(RCMD)))
         &none
         &none
         &none
         &none
 
         &none
-        &kp RS(RC(RA(RCMD)))
+        &none
         &none
         &none
         &none
