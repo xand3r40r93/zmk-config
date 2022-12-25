@@ -31,9 +31,9 @@
 #define L_NAV 1
 #define L_FN  2
 #define L_NUM 3
-#define L_PROG 4
+#define L_SMBL 4
 #define L_MOUSE 5
-#define L_SYMBOL 6
+#define L_ADV 6
 
 // KEY POSITION REFERENCE
 // ------------------------------------------------------------------
@@ -121,7 +121,7 @@
         &kp Q                         // q         -> q   | Q
         &kp W                         // w         -> w   | W
         &kp E                         // e         -> e   | E
-        &lt_b L_PROG R                // r         -> r   | R
+        &lt_b L_SMBL R                // r         -> r   | R
         &kp T                         // t         -> t   | T
 
         &kp Y                         // y         -> y   | Y
@@ -138,7 +138,7 @@
         &lt_b L_NAV F                 // f
         &lt_b L_MOUSE G               // g
 
-        &kp H                         // h
+        &lt_b L_ADV H                 // h
         &lt_b L_FN J                  // j
         &mt_r RALT K                  // k
         &mt_r RCTRL L                 // l
@@ -338,7 +338,7 @@
       >;
     };
 
-    programmer_layer {
+    sybmol_layer {
       bindings = <
       
         &none
@@ -450,170 +450,58 @@
       >;
     };
 
-    symbol_layer {
-      bindings = <
-      
-        &none
-        &kp PRCNT
-        &kp CARET
-        &kp PIPE
-        &kp AMPS
-        &none
-        
-        &none
-        &none
-        &none
-        &none
-        &none
-        &none
-
-        &none
-        &kp EXCL
-        &kp DLLR
-        &kp HASH
-        &kp AT
-        &none
-        
-        &none
-        &none
-        &none
-        &none
-        &none
-        &none
-        
-        &trans
-        &none
-        &none
-        &none
-        &none
-        &none
-        
-        &none
-        &none
-        &none
-        &none
-        &none
-        &trans
-        
-        &trans
-        &trans
-        &trans
-
-        &trans
-        &trans
-        &trans
-
-      >;
-    };
-    
-    lower_layer {
+    advanced_layer {
       bindings = <
 
-        &kp TAB
-        &kp N1
-        &kp N2
-        &kp N3
-        &kp N4
-        &kp N5
-        
-        &kp N6
-        &kp N7
-        &kp N8
-        &kp N9
-        &kp N0
-        &kp BSPC
-
-        &bt BT_CLR
-        &bt BT_SEL 0
-        &bt BT_SEL 1
-        &bt BT_SEL 2
         &bt BT_SEL 3
+        &bt BT_SEL 0
+        &none
+        &kp C_BRI_UP
+        &kp K_VOL_UP
+        &none
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+        
         &bt BT_SEL 4
-
-        &kp LEFT
-        &kp DOWN
-        &kp UP
-        &kp RIGHT
+        &bt BT_SEL 1
         &none
-        &none
-
-        &kp LSHFT
-        &none
-        &none
-        &none
-        &none
+        &kp C_BRI_DN
+        &kp K_VOL_DN
         &none
 
         &none
-        &none
-        &none
-        &none
-        &none
-        &none
-
-        &kp LGUI
-        &none
-        &kp SPACE
-        
-        &kp RET
-        &none
-        &kp RALT
-
-      >;
-    };
-
-    raise_layer {
-      bindings = <
-
-        &kp TAB
-        &kp EXCL
-        &kp AT
-        &kp HASH
-        &kp DLLR
-        &kp PRCNT
-
-        &kp CARET
-        &kp AMPS
-        &kp KP_MULTIPLY
-        &kp LPAR
-        &kp RPAR
-        &kp BSPC
-
-        &kp LCTRL
         &none
         &none
         &none
         &none
         &none
         
-        &kp MINUS
-        &kp EQUAL
-        &kp LBKT
-        &kp RBKT
-        &kp BSLH
-        &kp GRAVE
-
-        &kp LSHFT
+        &bt BT_CLR
+        &bt BT_SEL 2
         &none
-        &none
-        &none
-        &none
+        &none 
+        &kp K_MUTE
         &none
 
-        &kp UNDER
-        &kp PLUS
-        &kp LBRC
-        &kp RBRC
-        &kp PIPE
-        &kp TILDE
-
-        &kp LGUI
         &none
-        &kp SPACE
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &none
+        &none
+        &none
         
-        &kp RET
         &none
-        &kp RALT
+        &none
+        &none
 
       >;
     };
