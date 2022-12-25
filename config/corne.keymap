@@ -67,6 +67,16 @@
       quick-tap-ms = <200>;
       hold-trigger-key-positions = <20 21 22  0 1 2 3 4 5  12 13 14 15 16 17  24 25 26 27 28 29  36 37 38>;
     };
+    mt_r_fslh_bslh: mod_tap_right_fslh_bslh {
+      compatible = "zmk,behavior-hold-tap";
+      label = "MOD_TAP_RIGHT_FSLH_BSLH";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&mm_equal_under>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <200>;
+      hold-trigger-key-positions = <20 21 22  0 1 2 3 4 5  12 13 14 15 16 17  24 25 26 27 28 29  36 37 38>;
+    };
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
@@ -140,7 +150,7 @@
         &kp SQT                       // '
         
         &kp CLCK                      // Left Shift
-        &kp Z                         // z
+        &mt_l RS(RC(RA(RG))) Z        // z
         &kp X                         // x
         &kp C                         // c
         &lt_b L_NUM V                 // v
@@ -151,7 +161,7 @@
         &kp COMMA                     // ,
         &kp DOT                       // .
         &td_fslh_bslh                 // /
-        &mm_equal_under               // Right Shift    -> RET 
+        &mt_r_fslh_bslh LS(LC(LA(LG))) // Right Shift    -> RET 
 
         &kp ESC                       // Left Option
         &kp LCMD                      // Left Command
