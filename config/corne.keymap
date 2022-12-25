@@ -173,7 +173,7 @@
     navigation_layer {
       bindings = <
 
-        &none
+        &kp GRAVE
         &none
         &none
         &none
@@ -187,7 +187,7 @@
         &kp PG_UP
         &none
 
-        &none
+        &kp TAB
         &kp LSHFT
         &kp LCTRL
         &kp LALT
@@ -229,7 +229,7 @@
     fn_layer {
       bindings = <
 
-        &none
+        &kp GRAVE
         &kp F1
         &kp F2
         &kp F3
@@ -243,7 +243,7 @@
         &none
         &none
 
-        &none
+        &kp TAB
         &kp F5
         &kp F6
         &kp F7
@@ -299,7 +299,7 @@
         &kp ASTRK
         &none
 
-        &none
+        &kp TAB
         &kp LSHFT
         &kp LCTRL
         &kp LALT
@@ -355,7 +355,7 @@
         &td_lbkt_rbkt
         &none
 
-        &none
+        &kp TAB
         &kp LSHFT
         &kp LCTRL
         &kp LALT
