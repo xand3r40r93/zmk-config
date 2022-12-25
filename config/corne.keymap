@@ -81,7 +81,7 @@
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_RIGHT_FSLH_BSLH";
       #binding-cells = <0>;
-      bindings = <&kp LS(LC(LA(LG)))>, <&mm_equal_under>;
+      bindings = <&kp LS(LC(LA(LG)))>, <&td_fslh_bslh>;
       flavor = "hold-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <200>;
