@@ -110,6 +110,13 @@
     TAP_DANCE(lt_gt, LT, GT)
     TAP_DANCE(excl_qmark, EXCL, QMARK)
     MOD_MORPH_SHIFT(equal_under, EQUAL, UNDER)     // ' | `
+    td: tap_dance { \
+      compatible = "zmk,behavior-tap-dance"; \
+        label = "TAP_DANCE"; \
+        #binding-cells = <2>; \
+        bindings = <&kp>, <&kp>; \
+        tapping-term-ms = <200>; \
+    };
   };
 
   keymap {
@@ -130,7 +137,7 @@
         &kp I                         // i         -> i   | I
         &kp O                         // o         -> o   | O
         &kp P                         // p         -> p   | P
-        &td_lbkt_rbkt                 // \         -> =   | _
+        &td LBKT RBKT                 // \         -> =   | _
 
         &kp TAB                       // Caps Lock
         &mt_l LSHFT A                 // a
