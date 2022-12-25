@@ -109,7 +109,7 @@
       bindings = <
 
         &kp GRAVE                     // Tab       -> Esc |
-        &kp Q                         // q         -> q   | Q
+        &mt_l RS(RC(RALT)) Q          // q         -> q   | Q
         &kp W                         // w         -> w   | W
         &kp E                         // e         -> e   | E
         &lt_b L_SMBL R                // r         -> r   | R
@@ -119,7 +119,7 @@
         &kp U                         // u         -> u   | U
         &kp I                         // i         -> i   | I
         &kp O                         // o         -> o   | O
-        &kp P                         // p         -> p   | P
+        &mt_r LS(LC(LALT)) P          // p         -> p   | P
         &td_lbkt_rbkt                 // \         -> =   | _
 
         &kp TAB                       // Caps Lock
@@ -165,7 +165,7 @@
       bindings = <
 
         &kp GRAVE
-        &none
+        &kp RS(RC(RALT))
         &none
         &none
         &none
@@ -231,7 +231,7 @@
         &none
         &none
         &none
-        &none
+        &kp LS(LC(LALT))
         &none
 
         &kp TAB
@@ -277,7 +277,7 @@
       bindings = <
         
         &none
-        &none
+        &kp RS(RC(RALT))
         &none
         &none
         &none
@@ -333,7 +333,7 @@
       bindings = <
       
         &none
-        &none
+        &kp RS(RC(RALT))
         &none
         &none
         &none
