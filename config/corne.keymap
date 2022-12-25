@@ -121,7 +121,7 @@
         &kp Q                         // q         -> q   | Q
         &kp W                         // w         -> w   | W
         &kp E                         // e         -> e   | E
-        &mt_l L_PROG R                // r         -> r   | R
+        &lt_b L_PROG R                // r         -> r   | R
         &kp T                         // t         -> t   | T
 
         &kp Y                         // y         -> y   | Y
