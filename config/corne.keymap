@@ -78,7 +78,7 @@
       flavor = "hold-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <200>;
-      hold-trigger-key-positions = <13 14 15 37  6 7 8 9 10 11  18 19 20 21 22 23  30 31 32 33 34 35  39 40 41>;
+      hold-trigger-key-positions = <13 14 15  6 7 8 9 10 11  18 19 20 21 22 23  30 31 32 33 34 35  39 40 41>;
     };
     mt_r: mod_tap_right {
       compatible = "zmk,behavior-hold-tap";
@@ -88,7 +88,7 @@
       flavor = "hold-preferred";
       tapping-term-ms = <200>;
       quick-tap-ms = <200>;
-      hold-trigger-key-positions = <20 21 22 40  0 1 2 3 4 5  12 13 14 15 16 17  24 25 26 27 28 29  36 37 38>;
+      hold-trigger-key-positions = <20 21 22  0 1 2 3 4 5  12 13 14 15 16 17  24 25 26 27 28 29  36 37 38>;
     };
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
@@ -102,8 +102,13 @@
     MOD_MORPH_SHIFT(sqt, SQT, GRAVE)     // ' | `
     MOD_MORPH_SHIFT(equal, EQUAL, UNDER) // = | _
     TAP_DANCE(grave, GRAVE, ESC)
-    TAP_DANCE(brackets, LBKT, RBKT)
-    TAP_DANCE(tab, TAB, CLCK)
+    TAP_DANCE(lbkt_rbkt, LBKT, RBKT)
+    TAP_DANCE(fslh_bslh, FSLH, BSLH)
+    TAP_DANCE(lpar_rpar, LPAR, RPAR)
+    TAP_DANCE(lbrc_rbrc, LBRC, RBRC)
+    TAP_DANCE(lt_gt, LT, GT)
+    TAP_DANCE(excl_qmark, EXCL, QMARK)
+    MOD_MORPH_SHIFT(equal_under, EQUAL, UNDER)     // ' | `
   };
 
   keymap {
@@ -116,7 +121,7 @@
         &kp Q                         // q         -> q   | Q
         &kp W                         // w         -> w   | W
         &kp E                         // e         -> e   | E
-        &kp R                         // r         -> r   | R
+        &mt_l L_PROG R                // r         -> r   | R
         &kp T                         // t         -> t   | T
 
         &kp Y                         // y         -> y   | Y
@@ -124,23 +129,23 @@
         &kp I                         // i         -> i   | I
         &kp O                         // o         -> o   | O
         &kp P                         // p         -> p   | P
-        &td_brackets                  // \         -> =   | _
+        &td_lbkt_rbkt                 // \         -> =   | _
 
-        &mt CLCK TAB                  // Caps Lock
+        &kp TAB                       // Caps Lock
         &mt_l LSHFT A                 // a
         &mt_l LCTRL S                 // s
         &mt_l LALT D                  // d
         &lt_b L_NAV F                 // f
         &lt_b L_MOUSE G               // g
 
-        &lt_b L_SYMBOL H              // h
-        &lt_b L_PROG J                // j
+        &kp H                         // h
+        &lt_b L_FN J                  // j
         &mt_r RALT K                  // k
         &mt_r RCTRL L                 // l
         &mt_r RSHFT SEMI              // ;
         &kp SQT                       // '
         
-        &kp ESC                       // Left Shift
+        &kp CLCK                      // Left Shift
         &kp Z                         // z
         &kp X                         // x
         &kp C                         // c
@@ -148,11 +153,11 @@
         &kp B                         // b
 
         &kp N                         // n
-        &lt_b L_FN M                  // m
+        &kp M                         // m
         &kp COMMA                     // ,
         &kp DOT                       // .
-        &kp FSLH                      // /
-        &kp BSPC                      // Right Shift    -> RET 
+        &td_fslh_bslh                 // /
+        &mm_equal_under               // Right Shift    -> RET 
 
         &kp ESC                       // Left Option
         &kp LCMD                      // Left Command
@@ -175,11 +180,11 @@
         &none
         &none
 
-        &kp PG_UP
+        &none
         &kp HOME
         &kp UP
         &kp END
-        &kp BSPC
+        &kp PG_UP
         &none
 
         &none
@@ -189,34 +194,34 @@
         &none
         &none
 
-        &kp PG_DN
+        &none
         &kp LEFT
         &kp DOWN
         &kp RIGHT
+        &kp PG_DN
+        &none
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &kp ESC
+        &kp LCMD
+        &kp SPACE
+
+        &kp SPACE
         &kp RET
-        &none
-
-        &trans
-        &none
-        &none
-        &none
-        &none
-        &none
-
-        &none
-        &none
-        &none
-        &none
-        &none
-        &trans
-
-        &trans
-        &trans
-        &trans
-
-        &trans
-        &trans
-        &trans
+        &kp BSPC
 
       >;
     };
@@ -252,7 +257,7 @@
         &kp RSHFT
         &none
 
-        &trans
+        &none
         &kp F9
         &kp F10
         &kp F11
@@ -264,15 +269,15 @@
         &none
         &none
         &none
-        &trans
+        &none
 
-        &trans
-        &trans
-        &trans
+        &kp ESC
+        &none
+        &kp SPACE
 
-        &trans
-        &trans
-        &trans
+        &kp SPACE
+        &mt RCMD RET
+        &kp BSPC
 
       >;
     };
@@ -287,11 +292,11 @@
         &none
         &none
 
-        &kp FSLH
+        &kp PLUS
         &kp N7
         &kp N8
         &kp N9
-        &kp MINUS
+        &kp ASTRK
         &none
 
         &none
@@ -301,34 +306,34 @@
         &none
         &none
 
-        &kp STAR
+        &kp MINUS
         &kp N4
         &kp N5
         &kp N6
-        &kp LS(PLUS)
+        &kp FSLH
+        &kp PRCNT
+
+        &none
+        &none
+        &none
+        &none
+        &none
         &none
 
-        &trans
-        &none
-        &none
-        &none
-        &none
-        &none
-
-        &kp EQUAL
+        &kp UNDER
         &kp N1
         &kp N2
         &kp N3
         &kp DOT
-        &trans
+        &kp EQUAL
 
-        &trans
-        &trans
-        &trans
+        &kp ESC
+        &kp LCMD
+        &none
 
         &kp N0
-        &trans
-        &trans
+        &kp RET
+        &kp BSPC
 
       >;
     };
@@ -337,25 +342,32 @@
       bindings = <
       
         &none
-        &kp LBKT
-        &kp LT
-        &kp LPAR
-        &kp LBRC
-        &kp FSLH
-
-        &none
         &none
         &none
         &none
         &none
         &none
 
+        &kp PLUS
+        &td_lbrc_rbrc
+        &td_lpar_rpar
+        &td_lt_gt
+        &td_lbkt_rbkt
         &none
-        &kp EXCL
+
         &none
-        &kp UNDER
-        &kp EQUAL
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
+        &none
+        &none
+
+        &kp MINUS
+        &kp AMPS
         &kp PIPE
+        &kp CARET
+        &kp TILDE
+        &kp PRCNT
 
         &none
         &none
@@ -364,27 +376,20 @@
         &none
         &none
 
-        &trans
-        &kp RBKT
-        &kp GT
-        &kp RPAR
-        &kp RBRC
-        &kp BSLH
+        &kp UNDER
+        &kp AT
+        &kp HASH
+        &kp DLLR
+        &td_excl_qmark
+        &kp EQUAL
 
-        &none
-        &none
-        &none
-        &none
-        &none
-        &trans
+        &kp ESC
+        &kp LCMD
+        &kp SPACE
 
-        &trans
-        &trans
-        &trans
-
-        &trans
-        &trans
-        &trans
+        &kp SPACE
+        &kp RET
+        &kp BSPC
       
       >;
     };
