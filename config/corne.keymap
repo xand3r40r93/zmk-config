@@ -5,7 +5,7 @@
 #define MACRO_SHIFT(NAME, KEY, ...) \
     ms_##NAME: ms_##NAME { \
     compatible = "zmk,behavior-macro"; \
-    label = ms_##NAME; \
+    label = ZMK_MACRO_STRINGIFY(ms_##NAME); \
     #binding-cells = <0>; \
     bindings \
       = <&macro_release &kp LSHFT> \
@@ -20,7 +20,7 @@
 #define MOD_MORPH_SHIFT(NAME, KEY, MOD_KEY) \
   mm_##NAME: mm_##NAME { \
     compatible = "zmk,behavior-mod-morph"; \
-    label = mm_##NAME; \
+    label = ZMK_MACRO_STRINGIFY(mm_##NAME); \
     #binding-cells = <0>; \
     bindings = <KEY>, <MOD_KEY>; \
     mods = <(MOD_LSFT|MOD_RSFT)>; \
@@ -30,7 +30,7 @@
 #define TAP_DANCE(NAME, KEY1, KEY2) \
   td_##NAME: td_##NAME { \
     compatible = "zmk,behavior-tap-dance"; \
-      label = td_##NAME; \
+      label = ZMK_MACRO_STRINGIFY(td_##NAME); \
       #binding-cells = <0>; \
       bindings = <KEY1>, <KEY2>; \
       tapping-term-ms = <200>; \
