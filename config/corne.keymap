@@ -137,7 +137,7 @@
         &kp SQT                       // '
         
         &kp CLCK                      // Left Shift
-        &mt_l RS(RC(RA(RCMD))) Z        // z
+        &mt_l RS(RC(RA(RCMD))) Z      // z
         &kp X                         // x
         &kp C                         // c
         &lt_b L_NUM V                 // v
@@ -200,7 +200,7 @@
         &none
 
         &none
-        &none
+        &kp RS(RC(RA(RCMD)))
         &none
         &none
         &none
@@ -259,7 +259,7 @@
         &none
         &none
         &none
-        &none
+        &kp LS(LC(LA(LCMD)))
         &none
 
         &kp ESC
@@ -305,7 +305,7 @@
         &kp PRCNT
 
         &none
-        &none
+        &kp RS(RC(RA(RCMD)))
         &none
         &none
         &none
@@ -361,7 +361,7 @@
         &kp PRCNT
 
         &none
-        &none
+        &kp RS(RC(RA(RCMD)))
         &none
         &none
         &none
