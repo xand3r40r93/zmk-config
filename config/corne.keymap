@@ -17,7 +17,7 @@
     compatible = "zmk,behavior-tap-dance"; \
       label = #NAME; \
       #binding-cells = <0>; \
-      bindings = <&kp KEY1>, <&kp KEY2>; \
+      bindings = <KEY1>, <KEY2>; \
       tapping-term-ms = <200>; \
   };
 
