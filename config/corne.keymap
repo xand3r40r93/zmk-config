@@ -207,8 +207,8 @@
 
         &kp TAB
         &none
-        &none
-        &none
+        &kp COLON
+        &kp COMMA
         &none
         &none
 
