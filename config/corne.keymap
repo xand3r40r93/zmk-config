@@ -202,8 +202,8 @@
         &kp N7
         &kp N8
         &kp N9
-        &kp PLUS
-        &kp ASTRK
+        &kp MINUS
+        &kp FSLH
 
         &kp TAB
         &none
@@ -216,8 +216,8 @@
         &kp N4
         &kp N5
         &kp N6
-        &kp MINUS
-        &kp FSLH
+        &kp PLUS
+        &kp ASTRK
 
         &none
         &none
