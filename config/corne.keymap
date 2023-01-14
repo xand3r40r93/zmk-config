@@ -136,7 +136,7 @@
       bindings = <
 
         &kp GRAVE
-        &mt_l LSHFT Q
+        &kp Q
         &mt_l LCTRL W
         &mt_l LALT E
         &lt_b L_SMBL2 R
@@ -146,11 +146,11 @@
         &lt_b L_FN U
         &mt_r RALT I
         &mt_r RCTRL O
-        &mt_r RSHFT P
+        &kp P
         &td_lbkt_rbkt
 
         &kp TAB
-        &kp A
+        &mt_l LSHFT A
         &kp S
         &kp D
         &lt_b L_NAV F
@@ -160,7 +160,7 @@
         &kp J
         &kp K
         &kp L
-        &kp SEMI
+        &mt_r RSHFT SEMI
         &kp SQT
 
         &kp CLCK
@@ -178,7 +178,7 @@
         &td_equal_minus
 
         &kp ESC
-        &kp LCMD
+        &mt LCMD TAB
         &kp SPACE
 
         &kp SPACE
