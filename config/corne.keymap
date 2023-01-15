@@ -125,29 +125,29 @@
 
         &kp GRAVE
         &kp Q
-        &lh_pht LCTRL W
-        &lh_pht LALT E
+        &kp W
+        &kp E
         &lt L_SMBL2 R
         &lt L_NUM T
 
         &kp Y
         &lt L_FN U
-        &rh_pht RALT I
-        &lh_pht RCTRL O
+        &kp I
+        &kp O
         &kp P
         &td_lbkt_rbkt
 
         &kp TAB
         &lh_pht LSHFT A
-        &kp S
-        &kp D
+        &lh_pht LCTRL S
+        &lh_pht LALT D
         &lt L_NAV F
         &lt L_SMBL1 G
 
         &kp H
         &kp J
-        &kp K
-        &kp L
+        &rh_pht RALT K
+        &rh_pht RCTRL L
         &rh_pht RSHFT SEMI
         &kp SQT
 
