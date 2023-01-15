@@ -483,7 +483,7 @@
 
         &mmv MOVE_LEFT
         &mmv MOVE_DOWN
-        &mmv MODE_UP
+        &mmv MOVE_UP
         &mmv MOVE_RIGHT
         &none
         &none
