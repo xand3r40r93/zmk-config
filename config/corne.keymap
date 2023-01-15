@@ -35,6 +35,16 @@
 // | 24 | 25 | 26 | 27 | 28 | 29 |    | 30 | 31 | 32 | 33 | 34 | 35 |
 //                | 36 | 37 | 38 |    | 39 | 40 | 41 |
 
+&mmv {
+  acceleration-exponent=<2>;
+  time-to-max-speed-ms = <500>;
+};
+
+&mvh {
+  acceleration-exponent=<2>;
+  time-to-max-speed-ms = <500>;
+};
+
 / {
 
   behaviors {
@@ -128,11 +138,11 @@
         &kp Q
         &kp W
         &kp E
-        &lt L_NAV R
-        &lt L_MOUSE T
+        &lt L_NUM R
+        &lt L_FN T
 
-        &kp Y
-        &lt L_FN U
+        &lt L_ADV Y
+        &kp U
         &kp I
         &kp O
         &kp P
@@ -156,8 +166,8 @@
         &kp Z
         &kp X
         &kp C
-        &lt L_NUM V
-        &kp B
+        &lt L_NAV V
+        &lt L_MOUSE B
 
         &kp N
         &kp M
@@ -171,7 +181,7 @@
         &kp SPACE
 
         &kp SPACE
-        &mt_ui RCMD RET
+        &mt RCMD RET
         &kp BSPC
 
       >;
@@ -181,9 +191,9 @@
       bindings = <
 
         &none
-        &kp LSHFT
-        &kp LCTRL
-        &kp LALT
+        &none
+        &kp COLON
+        &kp COMMA
         &none
         &none
 
@@ -195,9 +205,9 @@
         &kp FSLH
 
         &kp TAB
-        &none
-        &kp COLON
-        &kp COMMA
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
         &none
         &none
 
@@ -237,9 +247,9 @@
       bindings = <
 
         &none
-        &kp LSHFT
-        &kp LCTRL
-        &kp LALT
+        &none
+        &none
+        &none
         &none
         &none
 
@@ -251,9 +261,9 @@
         &kp RPAR
 
         &kp TAB
-        &none
-        &none
-        &none
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
         &none
         &none
 
@@ -293,9 +303,9 @@
       bindings = <
 
         &none
-        &kp LSHFT
-        &kp LCTRL
-        &kp LALT
+        &none
+        &none
+        &none
         &none
         &none
 
@@ -307,9 +317,9 @@
         &none
 
         &kp TAB
-        &none
-        &none
-        &none
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
         &none
         &none
 
@@ -349,9 +359,9 @@
       bindings = <
 
         &kp GRAVE
-        &kp LSHFT
-        &kp LCTRL
-        &kp LALT
+        &none
+        &none
+        &none
         &none
         &none
 
@@ -363,9 +373,9 @@
         &none
 
         &kp TAB
-        &none
-        &none
-        &none
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
         &none
         &none
 
@@ -405,24 +415,31 @@
       bindings = <
 
         &kp GRAVE
-        &kp F4
-        &kp F3
-        &kp F2
-        &kp F1
+        &none
+        &none
+        &none
+        &none
         &none
 
         &none
-        &none
-        &kp RALT
-        &kp RCTRL
-        &kp RSHFT
+        &kp F1
+        &kp F2
+        &kp F3
+        &kp F4
         &none
 
         &kp TAB
-        &kp F8
-        &kp F7
-        &kp F6
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
+        &none
+        &none
+
+        &none
         &kp F5
+        &kp F6
+        &kp F7
+        &kp F8
         &none
 
         &none
@@ -433,25 +450,18 @@
         &none
 
         &none
-        &kp F12
-        &kp F11
-        &kp F10
         &kp F9
-        &none
-
-        &none
-        &none
-        &none
-        &none
-        &none
+        &kp F10
+        &kp F11
+        &kp F12
         &none
 
         &kp DEL
-        &kp ESC
+        &mt LCMD ESC
         &kp SPACE
 
         &kp SPACE
-        &mt_ui RCMD RET
+        &kp RET
         &kp BSPC
 
       >;
