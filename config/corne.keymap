@@ -127,11 +127,11 @@
         &kp Q
         &hr LCTRL W
         &hr LALT E
-        &lt_b L_SMBL2 R
-        &lt_b L_NUM T
+        &lt L_SMBL2 R
+        &lt L_NUM T
 
         &kp Y
-        &lt_b L_FN U
+        &lt L_FN U
         &hr RALT I
         &hr RCTRL O
         &kp P
@@ -141,8 +141,8 @@
         &hr LSHFT A
         &kp S
         &kp D
-        &lt_b L_NAV F
-        &lt_b L_SMBL1 G
+        &lt L_NAV F
+        &lt L_SMBL1 G
 
         &kp H
         &kp J
