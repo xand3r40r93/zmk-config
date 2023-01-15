@@ -1,6 +1,6 @@
 / {
   behaviors {
-    mt_ui {
+    mt_ui: mod_tap_unless_interrupted {
       compatible = "zmk,behavior-hold-tap";
       label = "MOD_TAP_UNLESS_INTERRUPTED";
       #binding-cells = <2>;
