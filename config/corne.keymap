@@ -35,10 +35,10 @@
 // | 24 | 25 | 26 | 27 | 28 | 29 |    | 30 | 31 | 32 | 33 | 34 | 35 |
 //                | 36 | 37 | 38 |    | 39 | 40 | 41 |
 
-// &mmv {
+&mmv {
 //   acceleration-exponent=<2>;
-//   time-to-max-speed-ms = <500>;
-// };
+  time-to-max-speed-ms = <1000>;
+};
 
 // &mwh {
 //   acceleration-exponent=<2>;
@@ -49,7 +49,7 @@
 #undef MOVE_DOWN
 #undef MOVE_LEFT
 #undef MOVE_RIGHT
-#define MOVE_SPEED 1200
+#define MOVE_SPEED 1000
 #define MOVE_UP MOVE_VERT(-MOVE_SPEED)
 #define MOVE_DOWN MOVE_VERT(MOVE_SPEED)
 #define MOVE_LEFT MOVE_HOR(-MOVE_SPEED)
@@ -59,7 +59,7 @@
 #undef SCROLL_DOWN
 #undef SCROLL_LEFT
 #undef SCROLL_RIGHT
-#define SCROLL_SPEED 20
+#define SCROLL_SPEED 15
 #define SCROLL_UP SCROLL_VERT(SCROLL_SPEED)
 #define SCROLL_DOWN SCROLL_VERT(-SCROLL_SPEED)
 #define SCROLL_LEFT SCROLL_HOR(-SCROLL_SPEED)
@@ -498,8 +498,8 @@
         &none
 
         &mwh SCROLL_LEFT
-        &mwh SCROLL_DOWN
         &mwh SCROLL_UP
+        &mwh SCROLL_DOWN
         &mwh SCROLL_RIGHT
         &none
         &none
