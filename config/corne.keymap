@@ -53,7 +53,7 @@
       flavor = "tap-preferred";
       tapping-term-ms = <150>;
       quick-tap-ms = <0>;
-      hold-trigger-key-positions = <6 7 8 9 10 11  18 19 20 21 22 23  30 31 32 33 34 35>;
+      hold-trigger-key-positions = <6 7 8 9 10 11  18 19 20 21 22 23  30 31 32 33 34 35  39 40 41>;
     };
     mt_r: mod_tap_right {
       compatible = "zmk,behavior-hold-tap";
@@ -63,7 +63,7 @@
       flavor = "tap-preferred";
       tapping-term-ms = <150>;
       quick-tap-ms = <0>;
-      hold-trigger-key-positions = <0 1 2 3 4 5  12 13 14 15 16 17  24 25 26 27 28 29>;
+      hold-trigger-key-positions = <0 1 2 3 4 5  12 13 14 15 16 17  24 25 26 27 28 29  36 37 38>;
     };
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
@@ -125,20 +125,20 @@
 
         &kp GRAVE
         &kp Q
-        &hr LCTRL W
-        &hr LALT E
+        &lh_pht LCTRL W
+        &lh_pht LALT E
         &lt L_SMBL2 R
         &lt L_NUM T
 
         &kp Y
         &lt L_FN U
-        &hr RALT I
-        &hr RCTRL O
+        &rh_pht RALT I
+        &lh_pht RCTRL O
         &kp P
         &td_lbkt_rbkt
 
         &kp TAB
-        &hr LSHFT A
+        &lh_pht LSHFT A
         &kp S
         &kp D
         &lt L_NAV F
@@ -148,7 +148,7 @@
         &kp J
         &kp K
         &kp L
-        &hr RSHFT SEMI
+        &rh_pht RSHFT SEMI
         &kp SQT
 
         &kp CLCK
