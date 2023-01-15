@@ -91,13 +91,13 @@
       tapping-term-ms = <200>;
       quick-tap-ms = <200>;
     };
-    ZMK_TAP_DANCE(td_lbrc_rbrc, &kp LBRC, &kp RBRC) // { }
-    ZMK_TAP_DANCE(td_lpar_rpar, &kp LPAR, &kp RPAR) // ( )
-    ZMK_TAP_DANCE(td_lt_gt, &kp LT, &kp GT) // < >
-    ZMK_TAP_DANCE(td_lbkt_rbkt, &kp LBKT, &kp RBKT) // [ ]
-    ZMK_TAP_DANCE(td_hyper_fslh_bslh, &mt_r LS(LC(LA(LCMD))) FSLH, &kp BSLH)
-    ZMK_TAP_DANCE(td_excl_qmark, &kp EXCL, &kp QMARK)
-    ZMK_TAP_DANCE(td_equal_minus, &kp EQUAL, &kp MINUS)
+    TAP_DANCE(td_lbrc_rbrc, &kp LBRC, &kp RBRC) // { }
+    TAP_DANCE(td_lpar_rpar, &kp LPAR, &kp RPAR) // ( )
+    TAP_DANCE(td_lt_gt, &kp LT, &kp GT) // < >
+    TAP_DANCE(td_lbkt_rbkt, &kp LBKT, &kp RBKT) // [ ]
+    TAP_DANCE(td_hyper_fslh_bslh, &mt_r LS(LC(LA(LCMD))) FSLH, &kp BSLH)
+    TAP_DANCE(td_excl_qmark, &kp EXCL, &kp QMARK)
+    TAP_DANCE(td_equal_minus, &kp EQUAL, &kp MINUS)
     ZMK_MACRO(zm_rbrc,
       bindings
       = <&macro_release &kp LSHFT>
@@ -107,11 +107,11 @@
       , <&macro_press &kp LSHFT>
       ;
     )
-    ZMK_MOD_MORPH(mm_equal_under, &kp EQUAL, &kp UNDER,
+    MOD_MORPH(mm_equal_under, &kp EQUAL, &kp UNDER,
       mods = <(MOD_LSFT|MOD_RSFT)>;
       keep-mods = <(MOD_LSFT|MOD_RSFT)>;
     )
-    ZMK_MOD_MORPH(mm_lbrc_rbrc, &kp LBRC, &zm_rbrc,
+    MOD_MORPH(mm_lbrc_rbrc, &kp LBRC, &zm_rbrc,
       mods = <(MOD_LSFT|MOD_RSFT)>;
       keep-mods = <(MOD_LSFT|MOD_RSFT)>;
     )
@@ -125,20 +125,20 @@
 
         &kp GRAVE
         &kp Q
-        &mt_l LCTRL W
-        &mt_l LALT E
+        &hr LCTRL W
+        &hr LALT E
         &lt_b L_SMBL2 R
         &lt_b L_NUM T
 
         &kp Y
         &lt_b L_FN U
-        &mt_r RALT I
-        &mt_r RCTRL O
+        &hr RALT I
+        &hr RCTRL O
         &kp P
         &td_lbkt_rbkt
 
         &kp TAB
-        &mt_l LSHFT A
+        &hr LSHFT A
         &kp S
         &kp D
         &lt_b L_NAV F
@@ -148,7 +148,7 @@
         &kp J
         &kp K
         &kp L
-        &mt_r RSHFT SEMI
+        &hr RSHFT SEMI
         &kp SQT
 
         &kp CLCK
