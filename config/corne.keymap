@@ -107,8 +107,8 @@
       , <&macro_press &kp LSHFT>
       ;
     )
-    ZMK_MOD_MORPH(mm_equal_under, &kp EQUAL, &kp UNDER, (MOD_LSFT|MOD_RSFT))
-    ZMK_MOD_MORPH(mm_lbrc_rbrc, &kp LBRC, &zm_rbrc, (MOD_LSFT|MOD_RSFT))
+    ZMK_MOD_MORPH(mm_equal_under, &kp EQUAL, &kp UNDER, MOD_LSFT)
+    ZMK_MOD_MORPH(mm_lbrc_rbrc, &kp LBRC, &zm_rbrc, MOD_LSFT)
   };
 
   keymap {
