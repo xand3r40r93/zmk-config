@@ -138,17 +138,17 @@
         &td_lbkt_rbkt
 
         &kp TAB
-        &lh_pht LSHFT A
-        &lh_pht LCTRL S
-        &lh_pht LALT D
+        &mt_ui LSHFT A
+        &mt_ui LCTRL S
+        &mt_ui LALT D
         &lt L_NAV F
         &lt L_SMBL1 G
 
         &kp H
         &kp J
-        &rh_pht RALT K
-        &rh_pht RCTRL L
-        &rh_pht RSHFT SEMI
+        &mt_ui RALT K
+        &mt_ui RCTRL L
+        &mt_ui RSHFT SEMI
         &kp SQT
 
         &kp CLCK
@@ -166,11 +166,11 @@
         &td_equal_minus
 
         &kp ESC
-        &mt LCMD TAB
+        &mt_ui LCMD TAB
         &kp SPACE
 
         &kp SPACE
-        &mt RCMD RET
+        &mt_ui RCMD RET
         &kp BSPC
 
       >;
@@ -450,7 +450,7 @@
         &kp SPACE
 
         &kp SPACE
-        &mt RCMD RET
+        &mt_ui RCMD RET
         &kp BSPC
 
       >;
