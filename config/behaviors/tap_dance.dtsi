@@ -1,8 +1,6 @@
-#include <behaviors/macros.dtsi>
-
 #define ZMK_TAP_DANCE(name, behavior1, behavior2) \
   name: name { \
-    label = ZMK_MACRO_STRINGIFY(ZTD_ ## name); \
+    label = ZMK_MACRO_STRINGIFY(TD_ ## name); \
     compatible = "zmk,behavior-tap-dance"; \
     #binding-cells = <0>; \
     bindings = <behavior1>, <behavior2>; \
