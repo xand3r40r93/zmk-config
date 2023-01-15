@@ -6,6 +6,6 @@
     compatible = "zmk,behavior-mod-morph"; \
     #binding-cells = <0>; \
     bindings = <behavior1>, <behavior2>; \
-    mods = <mods>; \
-    keep-mods = <keep_mods>; \
+    mods = <(mods)>; \
+    keep-mods = <(keep_mods)>; \
   };
