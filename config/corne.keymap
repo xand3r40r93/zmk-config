@@ -1,7 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include "tap_dance.dtsi"
+#include "behaviors.dtsi"
 
 #define MACRO_SHIFT(NAME, KEY, ...) \
     ms_##NAME: ms_##NAME { \
@@ -17,17 +17,6 @@
     ; \
     __VA_ARGS__ \
   };
-
-#define MOD_MORPH_SHIFT(NAME, KEY, MOD_KEY) \
-  mm_##NAME: mm_##NAME { \
-    compatible = "zmk,behavior-mod-morph"; \
-    label = ZMK_MACRO_STRINGIFY(mm_##NAME); \
-    #binding-cells = <0>; \
-    bindings = <KEY>, <MOD_KEY>; \
-    mods = <(MOD_LSFT|MOD_RSFT)>; \
-    keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
-  };
-
 
 #define L_DEF 0
 #define L_NUM 1
@@ -118,8 +107,8 @@
       , <&macro_press &kp LSHFT>
       ;
     )
-    MOD_MORPH_SHIFT(equal_under, &kp EQUAL, &kp UNDER)
-    MOD_MORPH_SHIFT(lbrc_rbrc, &kp LBRC, &zm_rbrc)
+    ZMK_MOD_MORPH(mm_equal_under, &kp EQUAL, &kp UNDER, (MOD_LSFT|MOD_RSFT), (MOD_LSFT|MOD_RSFT))
+    ZMK_MOD_MORPH(mm_lbrc_rbrc, &kp LBRC, &zm_rbrc, (MOD_LSFT|MOD_RSFT), (MOD_LSFT|MOD_RSFT))
   };
 
   keymap {

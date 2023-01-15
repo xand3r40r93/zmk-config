@@ -1,0 +1,2 @@
+#include "behaviors/mod_morph.dtsi"
+#include "behaviors/tap_dance.dtsi"
