@@ -1,9 +1,8 @@
-#define ZMK_MOD_MORPH(name, behavior1, behavior2, mods) \
+#define ZMK_MOD_MORPH(name, behavior1, behavior2, ...) \
   name: name { \
     label = ZMK_MACRO_STRINGIFY(MM_ ## name); \
     compatible = "zmk,behavior-mod-morph"; \
     #binding-cells = <0>; \
     bindings = <behavior1>, <behavior2>; \
-    mods = <(mods)>; \
-    keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
+    __VA_ARGS__ \
   };
