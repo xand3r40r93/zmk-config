@@ -1,11 +1,11 @@
 #include <behaviors/macros.dtsi>
 
-#define ZMK_MOD_MORPH(name, behavior1, behavior2, mods, keep_mods) \
+#define ZMK_MOD_MORPH(name, behavior1, behavior2) \
   name: name { \
     label = ZMK_MACRO_STRINGIFY(ZMM_ ## name); \
     compatible = "zmk,behavior-mod-morph"; \
     #binding-cells = <0>; \
     bindings = <behavior1>, <behavior2>; \
-    mods = <(mods)>; \
-    keep-mods = <(keep_mods)>; \
+    mods = <(MOD_LSFT|MOD_RSFT)>; \
+    keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
   };
