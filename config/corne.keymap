@@ -14,8 +14,8 @@
 
 #define L_DEFLT 0
 #define L_NUMBR 1
-#define L_SMBL1 2
-#define L_SMBL2 3
+#define L_SYMB1 2
+#define L_SYMB2 3
 #define L_NAVIG 4
 #define L_FNKEY 5
 #define L_MOUSE 6
@@ -29,7 +29,7 @@
   keymap {
     compatible = "zmk,keymap";
 
-    default_layer {
+    default {
       bindings = <
 
         &kp GRAVE
@@ -50,8 +50,8 @@
         &mt_l LSHFT A
         &mt_l LCTRL S
         &mt_l LALT D
-        &lt L_SMBL1 F
-        &lt L_SMBL2 G
+        &lt L_SYMB1 F
+        &lt L_SYMB2 G
 
         &kp H
         &kp J
@@ -85,7 +85,7 @@
       >;
     };
 
-    number_layer {
+    numbers {
       bindings = <
 
         &none
@@ -141,7 +141,7 @@
       >;
     };
 
-    sybmol1_layer {
+    sybmols1 {
       bindings = <
 
         &none
@@ -197,7 +197,7 @@
       >;
     };
 
-    sybmol2_layer {
+    sybmols2 {
       bindings = <
 
         &none
@@ -253,7 +253,7 @@
       >;
     };
 
-    navigation_layer {
+    navigation {
       bindings = <
 
         &kp GRAVE
@@ -309,10 +309,10 @@
       >;
     };
 
-    fn_layer {
+    fn {
       bindings = <
 
-        &kp GRAVE
+        &none
         &none
         &none
         &none
@@ -365,7 +365,7 @@
       >;
     };
 
-    mouse_layer {
+    mouse {
       bindings = <
 
         &none
@@ -382,10 +382,10 @@
         &none
         &none
 
-        &none
-        &none
-        &none
-        &none
+        &kp TAB
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
         &none
         &none
 
@@ -411,7 +411,7 @@
         &none
 
         &none
-        &none
+        &kp LCMD
         &none
 
         &none
@@ -421,7 +421,7 @@
       >;
     };
 
-    settings_layer {
+    settings {
       bindings = <
 
         &bt BT_SEL 3
@@ -481,11 +481,12 @@
 
   combos {
     compatible = "zmk,combos";
+
     combo_clck {
-      timeout-ms = <50>;
       key-positions = <13 22>;
       bindings = <&kp CLCK>;
     };
+
   };
 
 };
