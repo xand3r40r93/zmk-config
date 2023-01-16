@@ -122,6 +122,7 @@
       tapping-term-ms = <200>;
       quick-tap-ms = <200>;
     };
+    TAP_DANCE(td_tab_clck, &kp TAB, &kp CLCK)
     TAP_DANCE(td_lbrc_rbrc, &kp LBRC, &kp RBRC) // { }
     TAP_DANCE(td_lpar_rpar, &kp LPAR, &kp RPAR) // ( )
     TAP_DANCE(td_lt_gt, &kp LT, &kp GT) // < >
@@ -168,7 +169,7 @@
         &kp P
         &td_lbkt_rbkt
 
-        &kp TAB
+        &td_tab_clck
         &mt LSHFT A
         &mt LCTRL S
         &mt LALT D
@@ -526,19 +527,19 @@
         &none
 
         &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &none
+        &none
+        &none
+
+        &none
         &mkp LCLK
         &mkp RCLK
-        &none
-        &none
-        &none
-
-        &trans
-        &trans
-        &trans
-
-        &trans
-        &trans
-        &trans
 
       >;
     };
