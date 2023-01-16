@@ -76,26 +76,26 @@
       flavor = "balanced";
       tapping-term-ms = <500>;
     };
-    mt_l: mod_tap_left {
-      compatible = "zmk,behavior-hold-tap";
-      label = "MOD_TAP_LEFT";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <150>;
-      quick-tap-ms = <0>;
-      hold-trigger-key-positions = <6 7 8 9 10 11  18 19 20 21 22 23  30 31 32 33 34 35  39 40 41>;
-    };
-    mt_r: mod_tap_right {
-      compatible = "zmk,behavior-hold-tap";
-      label = "MOD_TAP_RIGHT";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-      flavor = "tap-preferred";
-      tapping-term-ms = <150>;
-      quick-tap-ms = <0>;
-      hold-trigger-key-positions = <0 1 2 3 4 5  12 13 14 15 16 17  24 25 26 27 28 29  36 37 38>;
-    };
+    // mt_l: mod_tap_left {
+    //   compatible = "zmk,behavior-hold-tap";
+    //   label = "MOD_TAP_LEFT";
+    //   #binding-cells = <2>;
+    //   bindings = <&kp>, <&kp>;
+    //   flavor = "tap-preferred";
+    //   tapping-term-ms = <150>;
+    //   quick-tap-ms = <0>;
+    //   hold-trigger-key-positions = <6 7 8 9 10 11  18 19 20 21 22 23  30 31 32 33 34 35  39 40 41>;
+    // };
+    // mt_r: mod_tap_right {
+    //   compatible = "zmk,behavior-hold-tap";
+    //   label = "MOD_TAP_RIGHT";
+    //   #binding-cells = <2>;
+    //   bindings = <&kp>, <&kp>;
+    //   flavor = "tap-preferred";
+    //   tapping-term-ms = <150>;
+    //   quick-tap-ms = <0>;
+    //   hold-trigger-key-positions = <0 1 2 3 4 5  12 13 14 15 16 17  24 25 26 27 28 29  36 37 38>;
+    // };
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
@@ -169,10 +169,10 @@
         &kp P
         &td_lbkt_rbkt
 
-        &td_tab_clck
-        &mt LSHFT A
-        &mt LCTRL S
-        &mt LALT D
+        &kp TAB
+        &mt_l LSHFT A
+        &mt_l LCTRL S
+        &mt_l LALT D
         &lt L_SMBL1 F
         &lt L_SMBL2 G
 
@@ -180,10 +180,10 @@
         &kp J
         &mt_ui RALT K
         &mt_ui RCTRL L
-        &mt RSHFT SEMI
+        &mt_r RSHFT SEMI
         &kp SQT
 
-        &none
+        &kp CLCK
         &kp Z
         &kp X
         &kp C
@@ -414,12 +414,12 @@
         &none
         &none
 
-        &none
-        &none
-        &none
-        &none
-        &none
-        &none
+        &kp LS(LC(TAB))
+        &kp LC(TAB)
+        &kp LG(TAB)
+        &kp LS(LG(TAB))
+        &kp LG(GRAVE)
+        &kp LS(LG(GRAVE))
 
         &kp DEL
         &mt LCMD ESC
