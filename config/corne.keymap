@@ -4,21 +4,20 @@
 #include <dt-bindings/zmk/bt.h>
 #include "behaviors.dtsi"
 
-// KEY POSITION REFERENCE
-// -------------------------------  -------------------------------
+//  -----------------------------    -----------------------------
 // | 00 | 01 | 02 | 03 | 04 | 05 |  | 06 | 07 | 08 | 09 | 10 | 11 |
 // | 12 | 13 | 14 | 15 | 16 | 17 |  | 18 | 19 | 20 | 21 | 22 | 23 |
 // | 24 | 25 | 26 | 27 | 28 | 29 |  | 30 | 31 | 32 | 33 | 34 | 35 |
-// ---------------| 36 | 37 | 38 |  | 39 | 40 | 41 |---------------
-//                ----------------  ----------------
+//  --------------| 36 | 37 | 38 |  | 39 | 40 | 41 |--------------
+//  KEY POSITIONS  --------------    --------------
 
 #define L_DEFLT 0
-#define L_NUMBR 1
-#define L_SYMB1 2
-#define L_SYMB2 3
+#define L_SYMB1 1
+#define L_SYMB2 2
+#define L_NUMBR 3
 #define L_NAVIG 4
-#define L_FNKEY 5
-#define L_MOUSE 6
+#define L_MOUSE 5
+#define L_FNKEY 6
 #define L_SETNG 7
 
 / {
@@ -81,62 +80,6 @@
         &kp SPACE
         &mt RCMD RET
         &kp BSPC
-
-      >;
-    };
-
-    numbers {
-      bindings = <
-
-        &none
-        &none
-        &kp COLON
-        &kp COMMA
-        &none
-        &none
-
-        &kp LT
-        &kp N7
-        &kp N8
-        &kp N9
-        &kp MINUS
-        &kp FSLH
-
-        &kp TAB
-        &kp LSHFT
-        &kp LCTRL
-        &kp LALT
-        &none
-        &none
-
-        &kp EQUAL
-        &kp N4
-        &kp N5
-        &kp N6
-        &kp PLUS
-        &kp ASTRK
-
-        &none
-        &none
-        &none
-        &none
-        &none
-        &none
-
-        &kp GT
-        &kp N1
-        &kp N2
-        &kp N3
-        &kp DOT
-        &kp PRCNT
-
-        &trans
-        &trans
-        &trans
-
-        &kp N0
-        &trans
-        &trans
 
       >;
     };
@@ -253,6 +196,62 @@
       >;
     };
 
+    numbers {
+      bindings = <
+
+        &none
+        &none
+        &kp COLON
+        &kp COMMA
+        &none
+        &none
+
+        &kp LT
+        &kp N7
+        &kp N8
+        &kp N9
+        &kp MINUS
+        &kp FSLH
+
+        &kp TAB
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
+        &none
+        &none
+
+        &kp EQUAL
+        &kp N4
+        &kp N5
+        &kp N6
+        &kp PLUS
+        &kp ASTRK
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &kp GT
+        &kp N1
+        &kp N2
+        &kp N3
+        &kp DOT
+        &kp PRCNT
+
+        &trans
+        &trans
+        &trans
+
+        &kp N0
+        &trans
+        &trans
+
+      >;
+    };
+
     navigation {
       bindings = <
 
@@ -297,62 +296,6 @@
         &kp LS(LG(TAB))
         &kp LG(GRAVE)
         &kp LS(LG(GRAVE))
-
-        &trans
-        &trans
-        &trans
-
-        &trans
-        &trans
-        &trans
-
-      >;
-    };
-
-    fn {
-      bindings = <
-
-        &none
-        &none
-        &none
-        &none
-        &none
-        &none
-
-        &none
-        &kp F1
-        &kp F2
-        &kp F3
-        &kp F4
-        &none
-
-        &kp TAB
-        &kp LSHFT
-        &kp LCTRL
-        &kp LALT
-        &none
-        &none
-
-        &none
-        &kp F5
-        &kp F6
-        &kp F7
-        &kp F8
-        &none
-
-        &none
-        &none
-        &none
-        &none
-        &none
-        &none
-
-        &none
-        &kp F9
-        &kp F10
-        &kp F11
-        &kp F12
-        &none
 
         &trans
         &trans
@@ -417,6 +360,62 @@
         &none
         &mkp LCLK
         &mkp RCLK
+
+      >;
+    };
+
+    fn {
+      bindings = <
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &none
+        &kp F1
+        &kp F2
+        &kp F3
+        &kp F4
+        &none
+
+        &kp TAB
+        &kp LSHFT
+        &kp LCTRL
+        &kp LALT
+        &none
+        &none
+
+        &none
+        &kp F5
+        &kp F6
+        &kp F7
+        &kp F8
+        &none
+
+        &none
+        &none
+        &none
+        &none
+        &none
+        &none
+
+        &none
+        &kp F9
+        &kp F10
+        &kp F11
+        &kp F12
+        &none
+
+        &trans
+        &trans
+        &trans
+
+        &trans
+        &trans
+        &trans
 
       >;
     };
