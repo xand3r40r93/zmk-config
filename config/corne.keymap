@@ -36,7 +36,7 @@
 //                | 36 | 37 | 38 |    | 39 | 40 | 41 |
 
 &mmv {
-  acceleration-exponent = <3>;
+//  acceleration-exponent = <3>;
   time-to-max-speed-ms = <1000>;
 };
 
@@ -49,7 +49,7 @@
 #undef MOVE_DOWN
 #undef MOVE_LEFT
 #undef MOVE_RIGHT
-#define MOVE_SPEED 1000
+#define MOVE_SPEED 1500
 #define MOVE_UP MOVE_VERT(-MOVE_SPEED)
 #define MOVE_DOWN MOVE_VERT(MOVE_SPEED)
 #define MOVE_LEFT MOVE_HOR(-MOVE_SPEED)
