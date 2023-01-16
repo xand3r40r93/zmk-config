@@ -21,7 +21,7 @@
       #binding-cells = <2>;
       bindings = <&kp>, <&kp>;
       flavor = "hold-preferred";
-      hold-trigger-key-positions = <LMODS RKEY>
+      hold-trigger-key-positions = <LMODS RKEYS>
       tapping-term-ms = <MOD_TAP_TAPPING_TERM_MS>;
       quick-tap-ms = <MOD_TAP_QUICK_TAP_MS>;
     };
@@ -31,7 +31,7 @@
       #binding-cells = <2>;
       bindings = <&kp>, <&kp>;
       flavor = "hold-preferred";
-      hold-trigger-key-positions = <RMODS LKEY>
+      hold-trigger-key-positions = <RMODS LKEYS>
       tapping-term-ms = <MOD_TAP_TAPPING_TERM_MS>;
       quick-tap-ms = <MOD_TAP_QUICK_TAP_MS>;
     };
