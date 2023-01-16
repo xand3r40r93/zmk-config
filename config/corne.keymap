@@ -183,7 +183,7 @@
         &mt RSHFT SEMI
         &kp SQT
 
-        &kp CLCK
+        &none
         &kp Z
         &kp X
         &kp C
@@ -194,8 +194,8 @@
         &kp M
         &kp COMMA
         &kp DOT
-        &td_hyper_fslh_bslh
-        &td_equal_minus
+        &kp FSLH
+        &none
 
         &kp DEL
         &mt LCMD ESC
