@@ -35,10 +35,10 @@
 #define SCROLL_LEFT SCROLL_HOR(-MOUSE_SCROLL_SPEED)
 #define SCROLL_RIGHT SCROLL_HOR(MOUSE_SCROLL_SPEED)
 
-#define MMV_UP(SPEED) &mmv MOVE_VERT(-SPEED)
-#define MMV_DOWN(SPEED) &mmv MOVE_VERT(SPEED)
-#define MMV_LEFT(SPEED) &mmv MOVE_HOR(-SPEED)
-#define MMV_LEFT(RIGHT) &mmv MOVE_HOR(SPEED)
+#define MMV_UP(speed) &mmv MOVE_VERT(-speed)
+#define MMV_DOWN(speed) &mmv MOVE_VERT(speed)
+#define MMV_LEFT(speed) &mmv MOVE_HOR(-speed)
+#define MMV_RIGHT(speed) &mmv MOVE_HOR(speed)
 
 / {
   behaviors {
