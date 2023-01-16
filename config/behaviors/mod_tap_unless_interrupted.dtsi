@@ -1,3 +1,7 @@
+&mt {
+  tapping-term-ms = <150>;
+};
+
 / {
   behaviors {
     mt_ui: mod_tap_unless_interrupted {
