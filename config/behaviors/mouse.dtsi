@@ -1,0 +1,30 @@
+#define MOUSE_MOVE_SPEED 1500
+#define MOUSE_SCROLL_SPEED 15
+
+&mmv {
+  // acceleration-exponent = <3>;
+  time-to-max-speed-ms = <1000>;
+};
+
+&mwh {
+  // acceleration-exponent=<2>;
+  // time-to-max-speed-ms = <500>;
+};
+
+#undef MOVE_UP
+#undef MOVE_DOWN
+#undef MOVE_LEFT
+#undef MOVE_RIGHT
+#define MOVE_UP MOVE_VERT(-MOUSE_MOVE_SPEED)
+#define MOVE_DOWN MOVE_VERT(MOUSE_MOVE_SPEED)
+#define MOVE_LEFT MOVE_HOR(-MOUSE_MOVE_SPEED)
+#define MOVE_RIGHT MOVE_HOR(MOUSE_MOVE_SPEED)
+
+#undef SCROLL_UP
+#undef SCROLL_DOWN
+#undef SCROLL_LEFT
+#undef SCROLL_RIGHT
+#define SCROLL_UP SCROLL_VERT(MOUSE_SCROLL_SPEED)
+#define SCROLL_DOWN SCROLL_VERT(-MOUSE_SCROLL_SPEED)
+#define SCROLL_LEFT SCROLL_HOR(-MOUSE_SCROLL_SPEED)
+#define SCROLL_RIGHT SCROLL_HOR(MOUSE_SCROLL_SPEED)

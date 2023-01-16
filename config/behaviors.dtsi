@@ -1,5 +1,6 @@
 #include "behaviors/homerow_mods.dtsi"
 #include "behaviors/mod_morph.dtsi"
 #include "behaviors/mod_tap.dtsi"
+#include "behaviors/mouse.dtsi"
 #include "behaviors/positional_hold_tap.dtsi"
 #include "behaviors/tap_dance.dtsi"
