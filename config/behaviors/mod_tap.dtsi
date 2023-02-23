@@ -1,5 +1,5 @@
 #define MOD_TAP_FLAVOR "tap-preferred"
-#define MOD_TAP_TAPPING_TERM_MS 150
+#define MOD_TAP_TAPPING_TERM_MS 200
 #define MOD_TAP_QUICK_TAP_MS 200
 
 //  -----------------------------    -----------------------------
