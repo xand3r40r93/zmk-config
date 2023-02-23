@@ -475,7 +475,7 @@
     compatible = "zmk,combos";
 
     combo_clck {
-      key-positions = <13 22>;
+      key-positions = <12 23>;
       bindings = <&kp CLCK>;
     };
 
