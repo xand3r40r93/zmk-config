@@ -73,13 +73,13 @@
         &kp FSLH
         &kp RBKT
 
-        &kp SPACE
+        &kp BSPC
         &mt LCMD ESC
         &none
 
         &none
         &mt RCMD RET
-        &kp BSPC
+        &kp SPACE
 
       >;
     };
