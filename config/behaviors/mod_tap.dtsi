@@ -17,7 +17,7 @@
 &mt {
   // flavor = "hold-preferred";
   // flavor = "balanced";
-  flavor = MOD_TAP_FLAVOR;
+  // flavor = MOD_TAP_FLAVOR;
   tapping-term-ms = <MOD_TAP_TAPPING_TERM_MS>;
   quick-tap-ms = <MOD_TAP_QUICK_TAP_MS>;
 };
