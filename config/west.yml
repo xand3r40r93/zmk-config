@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: zmkfirmware
+    - name: xand3r40r93
       url-base: https://github.com/xand3r40r93
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: mouse-ftc
+      remote: xand3r40r93
+      revision: v1.0.0
       import: app/west.yml
   self:
     path: config
