@@ -481,7 +481,7 @@
 
     combo_equal {
       key-positions = <19 20>;
-      bindings = <&kp EQUAL>
+      bindings = <&kp EQUAL>;
     };
 
   };
